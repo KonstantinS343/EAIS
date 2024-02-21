@@ -13,16 +13,28 @@ from PyQt5 import QtCore, QtWidgets
 import sys
 import re
 import nltk
+import os
 
 from morphy_logic import main, metadata
 
 
+HELLP_TEXT = """залупа.тииксти"""
+
+
+#  class Signals(QtCore.QObject):
+#    item_inserted = QtCore.pyqtSignal()
+
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
+        # self.signals = Signals()
+        self._opened_files = []
 
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1000, 600)
-        MainWindow.setMinimumSize(QtCore.QSize(1000, 600))
+        # MainWindow.resize(1000, 600)
+        # MainWindow.setMinimumSize(QtCore.QSize(1000, 600))
+        MainWindow.resize(1208, 600)
+        MainWindow.setMinimumSize(QtCore.QSize(1200, 0))
 
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -32,30 +44,41 @@ class Ui_MainWindow(object):
         self.gridLayout.setObjectName("gridLayout")
 
         self.clear_button = QtWidgets.QPushButton(self.centralwidget)
+        self.clear_button.setMinimumSize(QtCore.QSize(194, 0))
         self.clear_button.setObjectName("clear_button")
-        self.clear_button.setEnabled(False)
-        self.clear_button.setVisible(False)
-        self.gridLayout.addWidget(self.clear_button, 1, 3, 1, 1)
+        self.gridLayout.addWidget(self.clear_button, 6, 4, 1, 2)
 
         self.text_area = QtWidgets.QTextEdit(self.centralwidget)
         self.text_area.setObjectName("text_area")
-        self.text_area.setSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Expanding)
-        self.text_area.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.SizeAdjustPolicy.AdjustToContents)
-        self.gridLayout.addWidget(self.text_area, 0, 1, 1, 2)
+        self.text_area.setSizePolicy(
+            QtWidgets.QSizePolicy.Policy.Expanding,
+            QtWidgets.QSizePolicy.Policy.Expanding,
+        )
+        self.text_area.setSizeAdjustPolicy(
+            QtWidgets.QAbstractScrollArea.SizeAdjustPolicy.AdjustToContents
+        )
+        self.gridLayout.addWidget(self.text_area, 5, 0, 1, 2)
 
         self.analyze_text_button = QtWidgets.QPushButton(self.centralwidget)
-        self.analyze_text_button.setMinimumSize(QtCore.QSize(150, 0))
-        self.analyze_text_button.setObjectName("analize_text_button")
-        self.analyze_text_button.setEnabled(False)
-        self.gridLayout.addWidget(self.analyze_text_button, 1, 2, 1, 1)
+        self.analyze_text_button.setSizePolicy(
+            QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Fixed
+        )
+        self.analyze_text_button.setMinimumSize(QtCore.QSize(194, 0))
+        self.analyze_text_button.setObjectName("analyze_text_button")
+        self.gridLayout.addWidget(self.analyze_text_button, 6, 1, 1, 1)
 
         self.import_text_button = QtWidgets.QPushButton(self.centralwidget)
-        self.import_text_button.setMinimumSize(QtCore.QSize(150, 0))
+        self.import_text_button.setSizePolicy(
+            QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Fixed
+        )
+        self.import_text_button.setMinimumSize(QtCore.QSize(194, 0))
         self.import_text_button.setObjectName("import_text_button")
-        self.gridLayout.addWidget(self.import_text_button, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.import_text_button, 6, 0, 1, 1)
 
         self.result_table = QtWidgets.QTableWidget(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.result_table.sizePolicy().hasHeightForWidth())
@@ -63,42 +86,225 @@ class Ui_MainWindow(object):
         self.result_table.setObjectName("result_table")
         self.result_table.setColumnCount(0)
         self.result_table.setRowCount(0)
-        self.result_table.setEnabled(False)
-        self.result_table.setVisible(False)
 
-        self.result_table.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
-        self.result_table.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAsNeeded)
-        self.result_table.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustToContents)
+        self.result_table.horizontalHeader().setSectionResizeMode(
+            QtWidgets.QHeaderView.Stretch
+        )
+        self.result_table.setHorizontalScrollBarPolicy(
+            QtCore.Qt.ScrollBarPolicy.ScrollBarAsNeeded
+        )
+        self.result_table.setSizeAdjustPolicy(
+            QtWidgets.QAbstractScrollArea.AdjustToContents
+        )
         self.result_table.setAlternatingRowColors(False)
-        self.result_table.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectionBehavior.SelectItems)
-        self.result_table.setTextElideMode(QtCore.Qt.ElideMiddle)
+        self.result_table.setSelectionBehavior(
+            QtWidgets.QAbstractItemView.SelectionBehavior.SelectItems
+        )
+        self.result_table.setTextElideMode(QtCore.Qt.TextElideMode.ElideMiddle)
         self.result_table.setCornerButtonEnabled(False)
         self._set_result_table_vertical_headers()
-        # self.result_table.setEditTriggers(QtWidgets.QTableWidget.EditTrigger.NoEditTriggers)
+        self.result_table.setEditTriggers(
+            QtWidgets.QTableWidget.EditTrigger.NoEditTriggers
+        )
 
-        self.gridLayout.addWidget(self.result_table, 0, 3, 1, 1)
+        self.gridLayout.addWidget(self.result_table, 5, 2, 1, 4)
+
+        self.search_button = QtWidgets.QPushButton(self.centralwidget)
+        self.search_button.setObjectName("search_button")
+        self.gridLayout.addWidget(self.search_button, 0, 3, 1, 1)
+
+        self.help_button = QtWidgets.QPushButton(self.centralwidget)
+        self.help_button.setSizePolicy(
+            QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Fixed
+        )
+        self.help_button.setObjectName("help_button")
+        self.help_button.setCheckable(True)
+        self.gridLayout.addWidget(self.help_button, 0, 0, 1, 1)
+
+        # self.save_text_as_button = QtWidgets.QPushButton(self.centralwidget)
+        # self.save_text_as_button.setSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum,
+        # QtWidgets.QSizePolicy.Policy.Fixed)
+        # self.save_text_as_button.setMinimumSize(QtCore.QSize(194, 0))
+        # self.save_text_as_button.setObjectName("save_text_as_button")
+        # self.gridLayout.addWidget(self.save_text_as_button, 3, 0, 1, 1)
+
+        # self.save_text_button = QtWidgets.QPushButton(self.centralwidget)
+        # self.save_text_button.setSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Fixed)
+        # self.save_text_button.setMinimumSize(QtCore.QSize(194, 0))
+        # self.save_text_button.setObjectName("save_text_button")
+        # self.gridLayout.addWidget(self.save_text_button, 3, 1, 1, 1)
+
+        self.search_line_edit = QtWidgets.QLineEdit(self.centralwidget)
+        self.search_line_edit.setObjectName("search_line_edit")
+        self.gridLayout.addWidget(self.search_line_edit, 0, 4, 1, 2)
+
+        self.save_anal = QtWidgets.QPushButton(self.centralwidget)
+        self.save_anal.setMinimumSize(QtCore.QSize(194, 0))
+        self.save_anal.setStyleSheet("Сохранить результат разбора в файл")
+        self.save_anal.setObjectName("save_anal")
+        self.gridLayout.addWidget(self.save_anal, 6, 2, 1, 2)
+
+        self.help_area = QtWidgets.QTextBrowser(self.centralwidget)
+        self.help_area.setObjectName("help_area")
+        self.help_area.setSizePolicy(
+            QtWidgets.QSizePolicy.Policy.Preferred,
+            QtWidgets.QSizePolicy.Policy.Preferred,
+        )
+        self.gridLayout.addWidget(self.help_area, 3, 0, 1, 6)
+
+        self.max_frequency_spinbox = QtWidgets.QSpinBox(self.centralwidget)
+        self.max_frequency_spinbox.setAccelerated(True)
+        self.max_frequency_spinbox.setMaximum(2147483647)
+        self.max_frequency_spinbox.setObjectName("max_frequency_spinbox")
+        self.gridLayout.addWidget(self.max_frequency_spinbox, 0, 5, 1, 1)
+
+        self.min_frequency_spinbox = QtWidgets.QSpinBox(self.centralwidget)
+        self.min_frequency_spinbox.setAccelerated(True)
+        self.min_frequency_spinbox.setMaximum(2147483647)
+        self.min_frequency_spinbox.setStepType(
+            QtWidgets.QAbstractSpinBox.DefaultStepType
+        )
+        self.min_frequency_spinbox.setObjectName("min_frequency_spinbox")
+        self.gridLayout.addWidget(self.min_frequency_spinbox, 0, 4, 1, 1)
+
+        self.part_line_edit = QtWidgets.QLineEdit(self.centralwidget)
+        self.part_line_edit.setClearButtonEnabled(True)
+        self.part_line_edit.setObjectName("part_line_edit")
+        self.gridLayout.addWidget(self.part_line_edit, 0, 4, 1, 2)
 
         self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+
         MainWindow.setCentralWidget(self.centralwidget)
+
+        self.menuBar = QtWidgets.QMenuBar(MainWindow)
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 1208, 30))
+        self.menuBar.setObjectName("menuBar")
+        self.menu = QtWidgets.QMenu(self.menuBar)
+        self.menu.setObjectName("menu")
+        MainWindow.setMenuBar(self.menuBar)
+
+        self.lexem_filtration_action = QtWidgets.QAction(MainWindow)
+        self.lexem_filtration_action.setCheckable(True)
+        self.lexem_filtration_action.setChecked(True)
+        self.lexem_filtration_action.setObjectName("lexem_filtration_action")
+
+        self.frequency_filtration_action = QtWidgets.QAction(MainWindow)
+        self.frequency_filtration_action.setCheckable(True)
+        self.frequency_filtration_action.setObjectName("frequency_filtration_action")
+        self.part_filtration_action = QtWidgets.QAction(MainWindow)
+        self.part_filtration_action.setCheckable(True)
+        self.part_filtration_action.setObjectName("part_filtration_action")
+
+        self.menu.addAction(self.lexem_filtration_action)
+        self.menu.addSeparator()
+        self.menu.addAction(self.frequency_filtration_action)
+        self.menu.addSeparator()
+        self.menu.addAction(self.part_filtration_action)
+        self.menuBar.addAction(self.menu.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self._connect_all(MainWindow)
 
+        self.clear_button.setEnabled(False)
+        self.clear_button.setVisible(False)
+        self.analyze_text_button.setEnabled(False)
+        self.result_table.setEnabled(False)
+        self.result_table.setVisible(False)
+        self.search_button.setEnabled(False)
+        self.search_button.setVisible(False)
+        # self.save_text_as_button.setEnabled(False)
+        # self.save_text_button.setEnabled(False)
+        self.search_line_edit.setEnabled(False)
+        self.search_line_edit.setVisible(False)
+        self.save_anal.setEnabled(False)
+        self.save_anal.setVisible(False)
+        self.help_area.setEnabled(False)
+        self.help_area.setVisible(False)
+        self.max_frequency_spinbox.setEnabled(False)
+        self.max_frequency_spinbox.setVisible(False)
+        self.min_frequency_spinbox.setEnabled(False)
+        self.min_frequency_spinbox.setVisible(False)
+        self.part_line_edit.setEnabled(False)
+        self.part_line_edit.setVisible(False)
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Анализатор"))
-        self.clear_button.setText(_translate("MainWindow", "Очистить"))
-        self.analyze_text_button.setText(_translate("MainWindow", "Разобрать текст"))
-        self.import_text_button.setText(_translate("MainWindow", "Импортировать текст"))
-
-        self.result_table.horizontalHeaderItem(0).setText(_translate("MainWindow", "Словоформа"))
-        self.result_table.horizontalHeaderItem(1).setText(
-            _translate("MainWindow", "Количество в тексте")
+        self.save_anal.setToolTip(
+            _translate("MainWindow", "Сохранить результаты анализа текста в файл")
         )
-        self.result_table.horizontalHeaderItem(2).setText(
-            _translate("MainWindow", "Дополнительная информация")
+        self.save_anal.setText(_translate("MainWindow", "Сохранить разбор"))
+        self.help_button.setToolTip(_translate("MainWindow", "Открыть систему помощи"))
+        self.help_button.setText(_translate("MainWindow", "Помощь"))
+        self.analyze_text_button.setToolTip(
+            _translate("MainWindow", "Запустить анализ текста")
+        )
+        self.analyze_text_button.setText(_translate("MainWindow", "Разобрать текст"))
+        self.clear_button.setToolTip(
+            _translate(
+                "MainWindow",
+                "Очистить таблицу (нажмите второй раз, чтобы скрыть таблицу)",
+            )
+        )
+        self.clear_button.setText(_translate("MainWindow", "Очистить"))
+        self.help_area.setHtml(_translate("MainWindow", "Залупа.тииксти"))
+        self.import_text_button.setToolTip(
+            _translate("MainWindow", "Загрузить текст из файла")
+        )
+        self.import_text_button.setText(_translate("MainWindow", "Импортировать текст"))
+        self.max_frequency_spinbox.setToolTip(
+            _translate(
+                "MainWindow",
+                "Верхняя граница для фильтрации по частоте словоформы в тексте",
+            )
+        )
+        self.max_frequency_spinbox.setSpecialValueText(
+            _translate("MainWindow", "Верхняя граница")
+        )
+        self.search_line_edit.setToolTip(
+            _translate(
+                "MainWindow",
+                "Введите слово, по которому будет произведен поиск среди лексем и словоформ",
+            )
+        )
+        self.search_line_edit.setPlaceholderText(
+            _translate("MainWindow", "Введите слово для поиска...")
+        )
+        self.search_button.setToolTip(
+            _translate("MainWindow", "Поиск/фильтрация по введенному условию")
+        )
+        self.search_button.setText(_translate("MainWindow", "Поиск"))
+        self.min_frequency_spinbox.setToolTip(
+            _translate(
+                "MainWindow",
+                "Нижняя границу для фильтрации по частоте словоформы в тексте",
+            )
+        )
+        self.min_frequency_spinbox.setSpecialValueText(
+            _translate("MainWindow", "Нижняя граница")
+        )
+        self.part_line_edit.setToolTip(
+            _translate(
+                "MainWindow", "Введите название части речи, чтобы отфильтровать вывод"
+            )
+        )
+        self.part_line_edit.setPlaceholderText(
+            _translate("MainWindow", "Введите название части речи...")
+        )
+        self.menu.setTitle(_translate("MainWindow", "Фильтрация и поиск"))
+        self.lexem_filtration_action.setText(
+            _translate("MainWindow", "Поиск по словоформе")
+        )
+        self.frequency_filtration_action.setText(
+            _translate("MainWindow", "Фильтрация по частоте словоформы")
+        )
+        self.part_filtration_action.setText(
+            _translate("MainWindow", "Фильтрация по части речи")
+        )
+        self.part_filtration_action.setToolTip(
+            _translate("MainWindow", "Фильтрация по части речи")
         )
 
     def _set_result_table_vertical_headers(self):
@@ -125,39 +331,97 @@ class Ui_MainWindow(object):
         additional_info_item = QtWidgets.QTableWidgetItem()
         additional_info_item.setText(additional_info)
         self.result_table.setItem(row_to_insert, 2, additional_info_item)
+        if not self.save_anal.isEnabled():
+            self.save_anal.setEnabled(True)
 
     def _connect_all(self, MainWindow):
         self.text_area.textChanged.connect(self._text_area_edited)
-        self.import_text_button.clicked.connect(lambda: self._import_filename(MainWindow))
+        self.import_text_button.clicked.connect(
+            lambda: self._import_filename(MainWindow)
+        )
         self.analyze_text_button.clicked.connect(self.analyze_text_button_clicked)
         self.clear_button.clicked.connect(self._clear_button_clicked)
+        self.help_button.clicked.connect(self.help_button_clicked)
+        self.search_line_edit.textChanged.connect(self._search_line_text_changed)
+        self.search_button.clicked.connect(self._search_button_clicked)
+        self.save_anal.clicked.connect(self._save_anal_button_clicked)
+        self.part_line_edit.textChanged.connect(self._part_line_text_changed)
+        self.min_frequency_spinbox.valueChanged.connect(
+            self._min_freq_spinbox_value_changed
+        )
+        self.max_frequency_spinbox.valueChanged.connect(
+            self._max_freq_spinbox_value_changed
+        )
+
+        self.lexem_filtration_action.triggered.connect(
+            self._lexem_filtration_action_triggered
+        )
+        self.frequency_filtration_action.triggered.connect(
+            self._frequency_filtration_action_triggered
+        )
+        self.part_filtration_action.triggered.connect(
+            self._part_filtration_action_triggered
+        )
 
     def _text_area_edited(self):
         if not re.sub(r"\s+", "", self.text_area.toPlainText()):
             self.analyze_text_button.setEnabled(False)
+            # self.save_text_button.setEnabled(False)
+            # self.save_text_as_button.setEnabled(False)
         elif not self.analyze_text_button.isEnabled():
             self.analyze_text_button.setEnabled(True)
+            # self.save_text_button.setEnabled(True)
+            # self.save_text_as_button.setEnabled(True)
 
     def _import_filename(self, MainWindow):
         filename, ok = QtWidgets.QFileDialog.getOpenFileName(
             MainWindow,
             "импортировать файл с текстом",
             "/home",
-            "Text files (*.txt *.rtf)"
+            "Text files (*.txt *.rtf)",
         )
         if filename:
-            if not re.sub(r"\s+", "", self.text_area.toPlainText()):
-                self.text_area.clear()
-            with open(filename, 'r') as fin:
+            self._opened_files.append(filename)
+            if re.sub(r"\s+", "", self.text_area.toPlainText()):
+                question = QtWidgets.QMessageBox.question(
+                    MainWindow,
+                    "Подтверждение действия",
+                    "Вы хотите расширить текущий текст содежимым выбранного файла? Если нет,\
+                        то текущее содержимое поля с текстом очистится.",
+                    QtWidgets.QMessageBox.StandardButton.Yes
+                    | QtWidgets.QMessageBox.StandardButton.No,
+                )
+                with open(filename, "r") as fin:
+                    if question == QtWidgets.QMessageBox.StandardButton.Yes:
+                        self.text_area.insertPlainText(fin.read())
+                        return
+            with open(filename, "r") as fin:
                 self.text_area.setText(fin.read())
 
+    def _search_type(self):
+        if self.lexem_filtration_action.isChecked():
+            self.search_button.setVisible(True)
+            self.search_line_edit.setVisible(True)
+            self.search_line_edit.setEnabled(True)
+        elif self.frequency_filtration_action.isChecked():
+            self.search_button.setVisible(True)
+            self.min_frequency_spinbox.setVisible(True)
+            self.min_frequency_spinbox.setEnabled(True)
+            self.max_frequency_spinbox.setVisible(True)
+            self.max_frequency_spinbox.setEnabled(True)
+        elif self.part_filtration_action.isChecked():
+            self.search_button.setVisible(True)
+            self.part_line_edit.setVisible(True)
+            self.part_line_edit.setEnabled(True)
+
     def analyze_text_button_clicked(self):
-        nltk.download('averaged_perceptron_tagger')
         if not self.result_table.isEnabled():
             self.result_table.setVisible(True)
             self.clear_button.setVisible(True)
             self.result_table.setEnabled(True)
             self.clear_button.setEnabled(True)
+            self._search_type()
+            self.save_anal.setVisible(True)
         elif not self.result_table.rowCount() == 0:
             self._clear_result_table()
         result = main(self.text_area.toPlainText())
@@ -165,6 +429,11 @@ class Ui_MainWindow(object):
             self.emplace_word(key, value, metadata[nltk.pos_tag([key])[0][1]])
 
     def _clear_result_table(self):
+        self.save_anal.setEnabled(False)
+        self.search_line_edit.clear()
+        self.part_line_edit.clear()
+        self.max_frequency_spinbox.clear()
+        self.min_frequency_spinbox.clear()
         i = 0
         while i < self.result_table.rowCount():
             self.result_table.removeRow(0)
@@ -175,8 +444,206 @@ class Ui_MainWindow(object):
             self.clear_button.setEnabled(False)
             self.result_table.setVisible(False)
             self.clear_button.setVisible(False)
+            self.search_button.setEnabled(False)
+            self.search_button.setVisible(False)
+            self.search_line_edit.setVisible(False)
+            self.search_line_edit.setEnabled(False)
+            self.min_frequency_spinbox.setVisible(False)
+            self.min_frequency_spinbox.setEnabled(False)
+            self.max_frequency_spinbox.setVisible(False)
+            self.max_frequency_spinbox.setEnabled(False)
+            self.part_line_edit.setVisible(False)
+            self.part_line_edit.setEnabled(False)
+            self.save_anal.setEnabled(False)
+            self.save_anal.setVisible(False)
         else:
             self._clear_result_table()
+
+    def help_button_clicked(self):
+        if self.help_button.isChecked():
+            self.open_help_area()
+        else:
+            self.close_help_area()
+
+    def open_help_area(self):
+        self.clear_button.setEnabled(False)
+        self.clear_button.setVisible(False)
+        self.analyze_text_button.setEnabled(False)
+        self.analyze_text_button.setVisible(False)
+        self.result_table.setEnabled(False)
+        self.result_table.setVisible(False)
+        self.search_button.setEnabled(False)
+        self.search_button.setVisible(False)
+        self.search_line_edit.setVisible(False)
+        self.search_line_edit.setEnabled(False)
+        self.min_frequency_spinbox.setVisible(False)
+        self.min_frequency_spinbox.setEnabled(False)
+        self.max_frequency_spinbox.setVisible(False)
+        self.max_frequency_spinbox.setEnabled(False)
+        self.part_line_edit.setVisible(False)
+        self.part_line_edit.setEnabled(False)
+        self.save_anal.setEnabled(False)
+        self.save_anal.setVisible(False)
+        self.text_area.setEnabled(False)
+        self.text_area.setVisible(False)
+        self.import_text_button.setEnabled(False)
+        self.import_text_button.setVisible(False)
+
+        self.help_area.setEnabled(True)
+        self.help_area.setVisible(True)
+
+    def close_help_area(self):
+        self.help_area.setEnabled(False)
+        self.help_area.setVisible(False)
+
+        self.text_area.setEnabled(True)
+        self.text_area.setVisible(True)
+        self.import_text_button.setEnabled(True)
+        self.import_text_button.setVisible(True)
+        self.analyze_text_button.setVisible(True)
+        self._text_area_edited()
+
+        if self.result_table.rowCount() > 0:
+            self.save_anal.setEnabled(True)
+            self.save_anal.setVisible(True)
+            self.clear_button.setEnabled(True)
+            self.clear_button.setVisible(True)
+            self.result_table.setEnabled(True)
+            self.result_table.setVisible(True)
+            self._search_type()
+        self._search_line_text_changed()
+
+    def _search_line_text_changed(self):
+        if self.lexem_filtration_action.isChecked():
+            if not self.search_line_edit.text().replace(" ", ""):
+                self.search_button.setEnabled(False)
+            elif not self.search_button.isEnabled():
+                self.search_button.setEnabled(True)
+
+    def _min_freq_spinbox_value_changed(self):
+        if self.frequency_filtration_action.isChecked():
+            if self.max_frequency_spinbox.value() < self.min_frequency_spinbox.value():
+                self.max_frequency_spinbox.setValue(self.min_frequency_spinbox.value())
+            if (
+                self.min_frequency_spinbox.value() == 0
+                and self.max_frequency_spinbox.value() == 0
+            ):
+                self.search_button.setEnabled(False)
+            elif not self.search_button.isEnabled():
+                self.search_button.setEnabled(True)
+
+    def _max_freq_spinbox_value_changed(self):
+        if self.frequency_filtration_action.isChecked():
+            if self.min_frequency_spinbox.value() > self.max_frequency_spinbox.value():
+                self.min_frequency_spinbox.setValue(self.max_frequency_spinbox.value())
+            if (
+                self.max_frequency_spinbox.value() == 0
+                and self.min_frequency_spinbox.value() == 0
+            ):
+                self.search_button.setEnabled(False)
+            elif not self.search_button.isEnabled():
+                self.search_button.setEnabled(True)
+
+    def _part_line_text_changed(self):
+        if self.part_filtration_action.isChecked():
+            if not self.part_line_edit.text().replace(" ", ""):
+                self.search_button.setEnabled(False)
+            elif not self.search_button.isEnabled():
+                self.search_button.setEnabled(True)
+
+    def _search_button_clicked(self):
+        if self.lexem_filtration_action.isChecked():
+            word_to_search = self.search_line_edit.text().strip(
+                " "
+            )  # Слово, по которому поиск будет
+        elif self.frequency_filtration_action.isChecked():
+            min_frequency = self.min_frequency_spinbox.value()
+            max_frequency = self.max_frequency_spinbox.value()
+        else:
+            part_of_text_to_search = self.part_line_edit.text().strip(
+                " "
+            )  # Часть речи, по которому поиск будет
+        # TODO прочая хренб
+
+    def _save_anal_button_clicked(self):
+        filename, ok = QtWidgets.QFileDialog.getSaveFileName(
+            MainWindow, "сохранить разбор как...", os.path.curdir, "Text files(*.txt)"
+        )
+        if filename:
+            with open(filename, "w") as fout:
+                fout.write("Манал я такую музыку")
+        pass
+
+    def _lexem_filtration_action_triggered(self):
+        if self.lexem_filtration_action.isChecked():
+            if self.frequency_filtration_action.isChecked():
+                self.frequency_filtration_action.setChecked(False)
+                self.min_frequency_spinbox.setEnabled(False)
+                self.min_frequency_spinbox.setVisible(False)
+                self.max_frequency_spinbox.setEnabled(False)
+                self.max_frequency_spinbox.setVisible(False)
+            elif self.part_filtration_action.isChecked():
+                self.part_filtration_action.setChecked(False)
+                self.part_line_edit.setEnabled(False)
+                self.part_line_edit.setVisible(False)
+            if self.result_table.rowCount() > 0:
+                self.search_line_edit.setVisible(True)
+                self.search_line_edit.setEnabled(True)
+                if not self.search_button.isVisible():
+                    self.search_button.setVisible(True)
+        else:
+            self.search_button.setEnabled(False)
+            self.search_button.setVisible(False)
+            self.search_line_edit.setEnabled(False)
+            self.search_line_edit.setVisible(False)
+
+    def _frequency_filtration_action_triggered(self):
+        if self.frequency_filtration_action.isChecked():
+            if self.lexem_filtration_action.isChecked():
+                self.lexem_filtration_action.setChecked(False)
+                self.search_line_edit.setEnabled(False)
+                self.search_line_edit.setVisible(False)
+            elif self.part_filtration_action.isChecked():
+                self.part_filtration_action.setChecked(False)
+                self.part_line_edit.setEnabled(False)
+                self.part_line_edit.setVisible(False)
+            if self.result_table.rowCount() > 0:
+                self.min_frequency_spinbox.setVisible(True)
+                self.min_frequency_spinbox.setEnabled(True)
+                self.max_frequency_spinbox.setVisible(True)
+                self.max_frequency_spinbox.setEnabled(True)
+                if not self.search_button.isVisible():
+                    self.search_button.setVisible(True)
+        else:
+            self.search_button.setEnabled(False)
+            self.search_button.setVisible(False)
+            self.min_frequency_spinbox.setEnabled(False)
+            self.min_frequency_spinbox.setVisible(False)
+            self.max_frequency_spinbox.setEnabled(False)
+            self.max_frequency_spinbox.setVisible(False)
+
+    def _part_filtration_action_triggered(self):
+        if self.part_filtration_action.isChecked():
+            if self.lexem_filtration_action.isChecked():
+                self.lexem_filtration_action.setChecked(False)
+                self.search_line_edit.setEnabled(False)
+                self.search_line_edit.setVisible(False)
+            elif self.frequency_filtration_action.isChecked():
+                self.frequency_filtration_action.setChecked(False)
+                self.min_frequency_spinbox.setEnabled(False)
+                self.min_frequency_spinbox.setVisible(False)
+                self.max_frequency_spinbox.setEnabled(False)
+                self.max_frequency_spinbox.setVisible(False)
+            if self.result_table.rowCount() > 0:
+                self.part_line_edit.setVisible(True)
+                self.part_line_edit.setEnabled(True)
+                if not self.search_button.isVisible():
+                    self.search_button.setVisible(True)
+        else:
+            self.search_button.setEnabled(False)
+            self.search_button.setVisible(False)
+            self.part_line_edit.setEnabled(False)
+            self.part_line_edit.setVisible(False)
 
 
 app = QtWidgets.QApplication(sys.argv)
