@@ -443,7 +443,6 @@ class Ui_MainWindow(object):
         elif not self.result_table.rowCount() == 0:
             self._clear_result_table()
         start = time.time()
-        time.sleep(0.17)
         words = main(self.text_area.toPlainText())
         logging.info(time.time() - start)
         self.result = dict()
