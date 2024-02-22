@@ -1,0 +1,210 @@
+{
+    "abraham": {
+        "frequency": 2,
+        "additional information": "существительное в единственном числе"
+    },
+    "after": {
+        "frequency": 1,
+        "additional information": "предлог/подчинительный союз"
+    },
+    "been": {
+        "frequency": 1,
+        "additional information": "глагол, причастие прошедшего времени"
+    },
+    "before": {
+        "frequency": 1,
+        "additional information": "предлог/подчинительный союз"
+    },
+    "bible": {
+        "frequency": 2,
+        "additional information": "прилагательное"
+    },
+    "came": {
+        "frequency": 1,
+        "additional information": "глагол, прошедшее время"
+    },
+    "come": {
+        "frequency": 1,
+        "additional information": "глагол, базовая форма"
+    },
+    "copy": {
+        "frequency": 1,
+        "additional information": "существительное в единственном числе"
+    },
+    "dated": {
+        "frequency": 1,
+        "additional information": "глагол, причастие прошедшего времени"
+    },
+    "dead": {
+        "frequency": 1,
+        "additional information": "прилагательное"
+    },
+    "down": {
+        "frequency": 1,
+        "additional information": "наречие"
+    },
+    "earliest": {
+        "frequency": 1,
+        "additional information": "прилагательное в превосходной "
+    },
+    "found": {
+        "frequency": 1,
+        "additional information": "существительное в единственном числе"
+    },
+    "genesis": {
+        "frequency": 1,
+        "additional information": "существительное в единственном числе"
+    },
+    "god": {
+        "frequency": 3,
+        "additional information": "существительное в единственном числе"
+    },
+    "great": {
+        "frequency": 1,
+        "additional information": "прилагательное"
+    },
+    "has": {
+        "frequency": 2,
+        "additional information": "глагол, поющий в 3-м лице. настоящее принимает"
+    },
+    "he": {
+        "frequency": 1,
+        "additional information": "местоимение"
+    },
+    "i": {
+        "frequency": 2,
+        "additional information": "существительное в единственном числе"
+    },
+    "if": {
+        "frequency": 2,
+        "additional information": "предлог/подчинительный союз"
+    },
+    "it": {
+        "frequency": 1,
+        "additional information": "местоимение"
+    },
+    "known": {
+        "frequency": 1,
+        "additional information": "глагол, причастие прошедшего времени"
+    },
+    "least": {
+        "frequency": 1,
+        "additional information": "прилагательное в превосходной "
+    },
+    "make": {
+        "frequency": 1,
+        "additional information": "глагол, базовая форма"
+    },
+    "means": {
+        "frequency": 1,
+        "additional information": "существительное во множественном числе"
+    },
+    "most": {
+        "frequency": 1,
+        "additional information": "прилагательное в превосходной "
+    },
+    "name": {
+        "frequency": 3,
+        "additional information": "существительное в единственном числе"
+    },
+    "not": {
+        "frequency": 2,
+        "additional information": "наречие"
+    },
+    "only": {
+        "frequency": 1,
+        "additional information": "наречие"
+    },
+    "promise": {
+        "frequency": 3,
+        "additional information": "существительное в единственном числе"
+    },
+    "really": {
+        "frequency": 1,
+        "additional information": "наречие"
+    },
+    "remember": {
+        "frequency": 1,
+        "additional information": "глагол, базовая форма"
+    },
+    "says": {
+        "frequency": 1,
+        "additional information": "глагол, поющий в 3-м лице. настоящее принимает"
+    },
+    "scrolls": {
+        "frequency": 1,
+        "additional information": "существительное во множественном числе"
+    },
+    "sea": {
+        "frequency": 1,
+        "additional information": "существительное в единственном числе"
+    },
+    "since": {
+        "frequency": 1,
+        "additional information": "предлог/подчинительный союз"
+    },
+    "so": {
+        "frequency": 1,
+        "additional information": "наречие"
+    },
+    "that": {
+        "frequency": 2,
+        "additional information": "предлог/подчинительный союз"
+    },
+    "there": {
+        "frequency": 1,
+        "additional information": "наречие"
+    },
+    "this": {
+        "frequency": 1,
+        "additional information": "определитель"
+    },
+    "time": {
+        "frequency": 2,
+        "additional information": "существительное в единственном числе"
+    },
+    "today": {
+        "frequency": 1,
+        "additional information": "существительное в единственном числе"
+    },
+    "true": {
+        "frequency": 2,
+        "additional information": "прилагательное"
+    },
+    "us": {
+        "frequency": 1,
+        "additional information": "местоимение"
+    },
+    "was": {
+        "frequency": 2,
+        "additional information": "глагол, прошедшее время"
+    },
+    "which": {
+        "frequency": 1,
+        "additional information": "вопрос, который"
+    },
+    "will": {
+        "frequency": 1,
+        "additional information": "модальный глагол"
+    },
+    "wonder": {
+        "frequency": 1,
+        "additional information": "существительное в единственном числе"
+    },
+    "worldwide": {
+        "frequency": 1,
+        "additional information": "существительное в единственном числе"
+    },
+    "writing": {
+        "frequency": 1,
+        "additional information": "глагол, герундий/причастие настоящего времени"
+    },
+    "written": {
+        "frequency": 1,
+        "additional information": "глагол, причастие прошедшего времени"
+    },
+    "your": {
+        "frequency": 1,
+        "additional information": "местоимение"
+    }
+}

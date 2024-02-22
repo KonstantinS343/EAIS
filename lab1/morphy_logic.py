@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, Tuple
 from collections import defaultdict
 import re
 
@@ -49,6 +49,26 @@ metadata = {
     "WP": "вопрос кто, что",
     "WRB": "вопрос, где, когда",
 }
+
+
+def filter_rows(
+    flag: str,
+    data: Dict[str, Dict[str, str | int]],
+    search_type: str = None,
+    frequency: Tuple[int, int] = None,
+) -> Dict[str, int]:
+    filters = {
+        "word": filter(lambda x: search_type in x[0], data.items()),
+        "frequency": filter(
+            lambda x: frequency[0] <= x[1]["frequency"]
+            and frequency[1] >= x[1]["frequency"],
+            data.items(),
+        ),
+        "extra information": filter(
+            lambda x: search_type in x[1]["additional information"], data.items()
+        ),
+    }
+    return dict(filters[flag])
 
 
 def process_item(item: str) -> None | str:

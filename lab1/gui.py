@@ -14,16 +14,34 @@ import sys
 import re
 import nltk
 import os
+import json
+import logging
+import time
 
-from morphy_logic import main, metadata
+from morphy_logic import main, metadata, filter_rows
 
 
-HELLP_TEXT = """залупа.тииксти"""
+logging.basicConfig(format='[%(asctime)s | %(levelname)s]: %(message)s',
+                    datefmt='%m.%d.%Y %H:%M:%S',
+                    level=logging.INFO)
+
+HELP_TEXT = """Справка:
+1. Для импорта текста необходимо нажать на кнопку "Импортировать текст", также есть возможность писать текст вручную.
+2. Для разбора текста необходимо нажать кнопку "Разобрать текст", после чего появится таблица с результатом.
+
+В данной таблице можно редактировать дополнительнею информацию, которая представлена в 3 колонке.
+
+4. При нажатии на "Очистить", уберется таблица, при поыторном нажатии мы удалим весь введенный текст.
+5. Также есть возможность сохранить текст в файл в формате JSON, для комфортной визуализации результатов.
+
+6. Кроме того, после разбора текста можно начажать на "Фильрация и поиск" для фильтрации и поиска по словам, частоте и дополнительной информации.
+
+Удачи!
+"""
 
 
 #  class Signals(QtCore.QObject):
 #    item_inserted = QtCore.pyqtSignal()
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -249,7 +267,7 @@ class Ui_MainWindow(object):
             )
         )
         self.clear_button.setText(_translate("MainWindow", "Очистить"))
-        self.help_area.setHtml(_translate("MainWindow", "Залупа.тииксти"))
+        self.help_area.setText(_translate("MainWindow", HELP_TEXT))
         self.import_text_button.setToolTip(
             _translate("MainWindow", "Загрузить текст из файла")
         )
@@ -295,7 +313,7 @@ class Ui_MainWindow(object):
         )
         self.menu.setTitle(_translate("MainWindow", "Фильтрация и поиск"))
         self.lexem_filtration_action.setText(
-            _translate("MainWindow", "Поиск по словоформе")
+            _translate("MainWindow", "Поиск по словам")
         )
         self.frequency_filtration_action.setText(
             _translate("MainWindow", "Фильтрация по частоте словоформы")
@@ -424,9 +442,17 @@ class Ui_MainWindow(object):
             self.save_anal.setVisible(True)
         elif not self.result_table.rowCount() == 0:
             self._clear_result_table()
-        result = main(self.text_area.toPlainText())
-        for key, value in result.items():
+        start = time.time()
+        time.sleep(0.17)
+        words = main(self.text_area.toPlainText())
+        logging.info(time.time() - start)
+        self.result = dict()
+        for key, value in words.items():
             self.emplace_word(key, value, metadata[nltk.pos_tag([key])[0][1]])
+            self.result[key] = {
+                "frequency": value,
+                "additional information": metadata[nltk.pos_tag([key])[0][1]],
+            }
 
     def _clear_result_table(self):
         self.save_anal.setEnabled(False)
@@ -552,26 +578,39 @@ class Ui_MainWindow(object):
                 self.search_button.setEnabled(True)
 
     def _search_button_clicked(self):
+        flag = "word"
         if self.lexem_filtration_action.isChecked():
-            word_to_search = self.search_line_edit.text().strip(
-                " "
-            )  # Слово, по которому поиск будет
+            word_to_search = self.search_line_edit.text().strip(" ")
+            words = filter_rows(flag=flag, search_type=word_to_search, data=self.result)
+            # Слово, по которому поиск будет
         elif self.frequency_filtration_action.isChecked():
+            flag = "frequency"
             min_frequency = self.min_frequency_spinbox.value()
             max_frequency = self.max_frequency_spinbox.value()
+            words = filter_rows(
+                flag=flag, frequency=(min_frequency, max_frequency), data=self.result
+            )
+            # Слово, по которому поиск будет
         else:
-            part_of_text_to_search = self.part_line_edit.text().strip(
-                " "
-            )  # Часть речи, по которому поиск будет
-        # TODO прочая хренб
+            flag = "extra information"
+            part_of_text_to_search = self.part_line_edit.text().strip(" ")
+            words = filter_rows(
+                flag=flag, search_type=part_of_text_to_search, data=self.result
+            )
+            # Часть речи, по которому поиск будет
+        self._clear_result_table()
+        for key, value in words.items():
+            self.emplace_word(
+                key, value["frequency"], metadata[nltk.pos_tag([key])[0][1]]
+            )
 
     def _save_anal_button_clicked(self):
         filename, ok = QtWidgets.QFileDialog.getSaveFileName(
-            MainWindow, "сохранить разбор как...", os.path.curdir, "Text files(*.txt)"
+            MainWindow, "сохранить разбор как...", os.path.curdir, "Text files(*.json)"
         )
         if filename:
-            with open(filename, "w") as fout:
-                fout.write("Манал я такую музыку")
+            with open(filename + ".json", "w") as fout:
+                json.dump(self.result, fout, indent=4, ensure_ascii=False)
         pass
 
     def _lexem_filtration_action_triggered(self):
