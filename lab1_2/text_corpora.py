@@ -1,22 +1,39 @@
 import nltk
-from nltk.corpus import movie_reviews, stopwords
+from nltk.corpus import stopwords
 
-from typing import Dict, List
+from typing import Dict, List, Union
 import string
+import os
+import json
+
+from prepare_corpus import prepare
 
 
-def find_words(words: List[str]) -> Dict[str, int]:
+def import_corpus() -> Dict[str, Dict[str, Union[str, int]]]:
+    with open('movie_corpus.json', 'r') as file:
+        corpus = json.load(file)
+
+    return corpus
+
+
+def find_words(words: List[str]) -> Dict[str, Dict[str, Union[str, int]]]:
     words_with_info = dict()
-    frequency = nltk.FreqDist(movie_reviews.words())
+    if not os.path.isfile('./movie_corpus.json'):
+        frequency = prepare()
+    else:
+        frequency = import_corpus()
 
     for i in words:
-        if frequency[i] != 0:
-            words_with_info[i] = frequency[i]
+        try:
+            if frequency[i]['frequency'] != 0:
+                words_with_info[i] = frequency[i]
+        except KeyError:
+            continue
 
     return words_with_info
 
 
-def main(text: str) -> Dict[str, int]:
+def main(text: str) -> Dict[str, Dict[str, Union[str, int]]]:
     parsed_text = list()
     stop_words = set(stopwords.words('english')).union(set(string.punctuation))
 

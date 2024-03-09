@@ -2,6 +2,8 @@ from typing import Dict, Tuple, Union, Optional
 from collections import defaultdict
 import re
 
+import nltk
+
 not_tokens = [
     "are",
     "is",
@@ -85,8 +87,9 @@ def process_item(item: str) -> str:
     return item
 
 
-def parse_text(text: str) -> Dict[str, int]:
+def parse_text(text: str) -> Dict[str, Dict[str, Union[str, int]]]:
     parsed_text = defaultdict(lambda: 0)
+    words = dict()
     for i in text.split():
         i = process_item(i)
         if (
@@ -96,10 +99,16 @@ def parse_text(text: str) -> Dict[str, int]:
         ):
             parsed_text[i.lower()] += 1
 
-    return parsed_text
+    for key, value in parsed_text.items():
+        words[key] = {
+                "frequency": value,
+                "additional information": metadata[nltk.pos_tag([key])[0][1]],
+            }
+
+    return words
 
 
-def main(text: str):
+def main(text: str) -> Dict[str, Dict[str, Union[str, int]]]:
     words = dict(sorted(parse_text(text=text).items(), key=lambda x: x[0]))
 
     return words

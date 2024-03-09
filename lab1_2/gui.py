@@ -18,10 +18,10 @@ import json
 import logging
 import time
 
-from morphy_logic import (  # main,
-                          metadata,
+from morphy_logic import (# main,
                           filter_rows)
 from text_corpora import main
+from metadata import metadata
 
 
 logging.basicConfig(
@@ -449,15 +449,10 @@ class Ui_MainWindow(object):
         elif not self.result_table.rowCount() == 0:
             self._clear_result_table()
         start = time.time()
-        words = main(self.text_area.toPlainText())
+        self.result = main(self.text_area.toPlainText())
         logging.info(time.time() - start)
-        self.result = dict()
-        for key, value in words.items():
-            self.emplace_word(key, value, metadata[nltk.pos_tag([key])[0][1]])
-            self.result[key] = {
-                "frequency": value,
-                "additional information": metadata[nltk.pos_tag([key])[0][1]],
-            }
+        for key, value in self.result.items():
+            self.emplace_word(key, value['frequency'], value['additional information'])
 
     def _clear_result_table(self):
         self.save_anal.setEnabled(False)
