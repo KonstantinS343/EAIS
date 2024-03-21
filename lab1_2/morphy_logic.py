@@ -71,9 +71,9 @@ def parse_text(text: str) -> Dict[str, Dict[str, Union[str, int]]]:
 
     for key, value in parsed_text.items():
         words[key] = {
-                "frequency": value,
-                "additional information": metadata[nltk.pos_tag([key])[0][1]],
-            }
+            "frequency": value,
+            "additional information": metadata[nltk.pos_tag([key])[0][1]],
+        }
 
     return words
 

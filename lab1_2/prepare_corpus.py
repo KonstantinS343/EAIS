@@ -13,13 +13,13 @@ def prepare() -> Dict[str, Dict[str, Union[str, int]]]:
     for key, value in frequency.items():
         try:
             corpus[key] = {
-                    "frequency": value,
-                    "additional information": metadata[nltk.pos_tag([key])[0][1]],
-                }
+                "frequency": value,
+                "additional information": metadata[nltk.pos_tag([key])[0][1]],
+            }
         except KeyError:
             continue
 
-    with open('movie_corpus.json', 'w') as file:
+    with open("movie_corpus.json", "w") as file:
         json.dump(corpus, file, indent=4, ensure_ascii=False)
 
     return corpus

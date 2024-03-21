@@ -10,7 +10,7 @@ from prepare_corpus import prepare
 
 
 def import_corpus() -> Dict[str, Dict[str, Union[str, int]]]:
-    with open('movie_corpus.json', 'r') as file:
+    with open("movie_corpus.json", "r") as file:
         corpus = json.load(file)
 
     return corpus
@@ -18,14 +18,14 @@ def import_corpus() -> Dict[str, Dict[str, Union[str, int]]]:
 
 def find_words(words: List[str]) -> Dict[str, Dict[str, Union[str, int]]]:
     words_with_info = dict()
-    if not os.path.isfile('./movie_corpus.json'):
+    if not os.path.isfile("./movie_corpus.json"):
         frequency = prepare()
     else:
         frequency = import_corpus()
 
     for i in words:
         try:
-            if frequency[i]['frequency'] != 0:
+            if frequency[i]["frequency"] != 0:
                 words_with_info[i] = frequency[i]
         except KeyError:
             continue
@@ -35,7 +35,7 @@ def find_words(words: List[str]) -> Dict[str, Dict[str, Union[str, int]]]:
 
 def main(text: str) -> Dict[str, Dict[str, Union[str, int]]]:
     parsed_text = list()
-    stop_words = set(stopwords.words('english')).union(set(string.punctuation))
+    stop_words = set(stopwords.words("english")).union(set(string.punctuation))
 
     for i in nltk.word_tokenize(text):
         if i not in stop_words:

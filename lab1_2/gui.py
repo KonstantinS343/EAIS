@@ -18,10 +18,10 @@ import json
 import logging
 import time
 
-from morphy_logic import (# main,
-                          filter_rows)
+from morphy_logic import filter_rows  # main,
 from text_corpora import main
 from metadata import metadata
+from dialog import Ui_Dialog
 
 
 logging.basicConfig(
@@ -145,6 +145,13 @@ class Ui_MainWindow(object):
         self.help_button.setCheckable(True)
         self.gridLayout.addWidget(self.help_button, 0, 0, 1, 1)
 
+        self.contex = QtWidgets.QPushButton(self.centralwidget)
+        self.contex.setSizePolicy(
+            QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Fixed
+        )
+        self.contex.setObjectName("contex")
+        self.gridLayout.addWidget(self.contex, 0, 1, 1, 1)
+
         # self.save_text_as_button = QtWidgets.QPushButton(self.centralwidget)
         # self.save_text_as_button.setSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum,
         # QtWidgets.QSizePolicy.Policy.Fixed)
@@ -262,6 +269,10 @@ class Ui_MainWindow(object):
         self.save_anal.setText(_translate("MainWindow", "Сохранить разбор"))
         self.help_button.setToolTip(_translate("MainWindow", "Открыть систему помощи"))
         self.help_button.setText(_translate("MainWindow", "Помощь"))
+        self.contex.setToolTip(
+            _translate("MainWindow", "Поиск контекста использования слова")
+        )
+        self.contex.setText(_translate("MainWindow", "Контекст"))
         self.analyze_text_button.setToolTip(
             _translate("MainWindow", "Запустить анализ текста")
         )
@@ -366,6 +377,7 @@ class Ui_MainWindow(object):
         self.analyze_text_button.clicked.connect(self.analyze_text_button_clicked)
         self.clear_button.clicked.connect(self._clear_button_clicked)
         self.help_button.clicked.connect(self.help_button_clicked)
+        self.contex.clicked.connect(lambda: self.contex_button_clicked(MainWindow))
         self.search_line_edit.textChanged.connect(self._search_line_text_changed)
         self.search_button.clicked.connect(self._search_button_clicked)
         self.save_anal.clicked.connect(self._save_anal_button_clicked)
@@ -452,7 +464,7 @@ class Ui_MainWindow(object):
         self.result = main(self.text_area.toPlainText())
         logging.info(time.time() - start)
         for key, value in self.result.items():
-            self.emplace_word(key, value['frequency'], value['additional information'])
+            self.emplace_word(key, value["frequency"], value["additional information"])
 
     def _clear_result_table(self):
         self.save_anal.setEnabled(False)
@@ -490,6 +502,12 @@ class Ui_MainWindow(object):
             self.open_help_area()
         else:
             self.close_help_area()
+
+    def contex_button_clicked(self, MainWindow):
+        Dialog = QtWidgets.QDialog(parent=MainWindow)
+        ui = Ui_Dialog()
+        ui.setupUi(Dialog)
+        Dialog.show()
 
     def open_help_area(self):
         self.clear_button.setEnabled(False)
