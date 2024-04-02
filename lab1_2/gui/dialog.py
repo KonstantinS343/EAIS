@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtWidgets
 import logging
 import time
 
-from find_context import find_context
+from src.find_context import find_context
 
 
 CONTEXT_SIZE = (789, 476)

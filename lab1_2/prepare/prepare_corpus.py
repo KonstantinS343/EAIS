@@ -4,7 +4,7 @@ import nltk
 import json
 from typing import Dict, Union
 
-from metadata import metadata
+from conf.metadata import metadata
 
 
 def prepare() -> Dict[str, Dict[str, Union[str, int]]]:

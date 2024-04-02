@@ -8,7 +8,7 @@ import string
 import os
 import re
 
-from metadata import metadata
+from lab1_2.conf.metadata import metadata
 
 
 def text_to_xml(text: str, root_name: str) -> str:

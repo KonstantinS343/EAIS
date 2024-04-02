@@ -4,7 +4,7 @@ import re
 
 import nltk
 
-from metadata import metadata
+from conf.metadata import metadata
 
 not_tokens = [
     "are",
@@ -78,7 +78,7 @@ def parse_text(text: str) -> Dict[str, Dict[str, Union[str, int]]]:
     return words
 
 
-def main(text: str) -> Dict[str, Dict[str, Union[str, int]]]:
+def morphy_logic_main(text: str) -> Dict[str, Dict[str, Union[str, int]]]:
     words = dict(sorted(parse_text(text=text).items(), key=lambda x: x[0]))
 
     return words

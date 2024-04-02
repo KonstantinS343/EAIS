@@ -6,7 +6,7 @@ import string
 import os
 import json
 
-from prepare_corpus import prepare
+from prepare.prepare_corpus import prepare
 
 
 def import_corpus() -> Dict[str, Dict[str, Union[str, int]]]:
@@ -33,7 +33,7 @@ def find_words(words: List[str]) -> Dict[str, Dict[str, Union[str, int]]]:
     return words_with_info
 
 
-def main(text: str) -> Dict[str, Dict[str, Union[str, int]]]:
+def main_corpus(text: str) -> Dict[str, Dict[str, Union[str, int]]]:
     parsed_text = list()
     stop_words = set(stopwords.words("english")).union(set(string.punctuation))
 
