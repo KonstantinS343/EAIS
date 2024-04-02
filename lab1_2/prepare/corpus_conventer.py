@@ -7,8 +7,12 @@ import xml.dom.minidom
 import string
 import os
 import re
+import sys
+from pathlib import Path
 
-from lab1_2.conf.metadata import metadata
+sys.path.append(str(Path(__file__).parent.parent))
+
+from conf.metadata import metadata
 
 
 def text_to_xml(text: str, root_name: str) -> str:
@@ -18,25 +22,30 @@ def text_to_xml(text: str, root_name: str) -> str:
     sentences = sent_tokenize(text)
 
     stop_words = set(stopwords.words("english")).union(set(string.punctuation))
-
-    for i, sentence in enumerate(sentences):
-        sentence_element = ET.SubElement(root, "sentence", id=str(i + 1))
+    sentence_counter = 0
+    for sentence in sentences:
+        sentence_element = ET.SubElement(root, "sentence", id=str(sentence_counter + 1))
 
         words = word_tokenize(sentence)
-
-        for j, word in enumerate(words):
+        words_counter = 0
+        for word in words:
             if word not in stop_words:
                 try:
                     word_element = ET.SubElement(
                         sentence_element,
                         "word",
-                        id=str(j + 1),
+                        id=str(words_counter + 1),
                         info=metadata[nltk.pos_tag([word])[0][1]],
                     )
 
                     word_element.text = word
+                    words_counter += 1
                 except KeyError:
                     continue
+        if words_counter == 0:
+            root.remove(sentence_element)
+        else:
+            sentence_counter += 1
 
     xml_str = ET.tostring(root, encoding="utf-8")
 
@@ -46,9 +55,9 @@ def text_to_xml(text: str, root_name: str) -> str:
     return pretty_xml_str
 
 
-src_folder = "./lab1_2/movie_reviews"
+src_folder = str(Path(__file__).parent.parent) + "/movie_reviews"
 
-dst_folder = "./lab1_2/movie_reviews_converted"
+dst_folder = str(Path(__file__).parent.parent) + "/movie_reviews_converted"
 os.makedirs(dst_folder, exist_ok=True)
 
 for root_dir, dirs, files in os.walk(src_folder):
@@ -56,7 +65,7 @@ for root_dir, dirs, files in os.walk(src_folder):
         if file.endswith(".txt"):
             with open(os.path.join(root_dir, file), "r") as f:
                 text = f.read()
-            #  print(file)
+            print(file)
             xml_text = text_to_xml(text, file)
 
             new_dir = root_dir.replace(src_folder, dst_folder)

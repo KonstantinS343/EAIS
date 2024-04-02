@@ -4,692 +4,690 @@
     <word id="1" info="существительное в единственном числе">playwright</word>
     <word id="2" info="существительное в единственном числе">tom</word>
     <word id="3" info="существительное в единственном числе">stoppard</word>
-    <word id="5" info="существительное в единственном числе">screenwriter</word>
-    <word id="6" info="существительное в единственном числе">marc</word>
-    <word id="7" info="существительное в единственном числе">norman</word>
-    <word id="8" info="глагол, прошедшее время">took</word>
-    <word id="11" info="наречие">astonishingly</word>
-    <word id="12" info="прилагательное">difficult</word>
-    <word id="13" info="существительное в единственном числе">task</word>
-    <word id="16" info="глагол, прошедшее время">wanted</word>
-    <word id="18" info="существительное в единственном числе">write</word>
-    <word id="20" info="существительное в единственном числе">script</word>
-    <word id="22" info="существительное в единственном числе">william</word>
-    <word id="23" info="существительное в единственном числе">shakespeare</word>
-    <word id="25" info="существительное во множественном числе">parallels</word>
-    <word id="26" info="существительное в единственном числе">shakespeare</word>
-    <word id="27" info="притяжательное окончание">'s</word>
-    <word id="28" info="существительное во множественном числе">works</word>
+    <word id="4" info="существительное в единственном числе">screenwriter</word>
+    <word id="5" info="существительное в единственном числе">marc</word>
+    <word id="6" info="существительное в единственном числе">norman</word>
+    <word id="7" info="глагол, прошедшее время">took</word>
+    <word id="8" info="наречие">astonishingly</word>
+    <word id="9" info="прилагательное">difficult</word>
+    <word id="10" info="существительное в единственном числе">task</word>
+    <word id="11" info="глагол, прошедшее время">wanted</word>
+    <word id="12" info="существительное в единственном числе">write</word>
+    <word id="13" info="существительное в единственном числе">script</word>
+    <word id="14" info="существительное в единственном числе">william</word>
+    <word id="15" info="существительное в единственном числе">shakespeare</word>
+    <word id="16" info="существительное во множественном числе">parallels</word>
+    <word id="17" info="существительное в единственном числе">shakespeare</word>
+    <word id="18" info="притяжательное окончание">'s</word>
+    <word id="19" info="существительное во множественном числе">works</word>
   </sentence>
   <sentence id="2">
-    <word id="2" info="наречие">also</word>
-    <word id="3" info="глагол, прошедшее время">wanted</word>
-    <word id="5" info="существительное в единственном числе">poke</word>
-    <word id="6" info="существительное в единственном числе">fun</word>
-    <word id="9" info="существительное в единственном числе">way</word>
-    <word id="12" info="местоимение">us</word>
-    <word id="13" info="существительное в единственном числе">envision</word>
-    <word id="14" info="существительное в единственном числе">shakespeare</word>
-    <word id="17" info="существительное в единственном числе">mean</word>
-    <word id="19" info="наречие">really</word>
-    <word id="23" info="наречие">n't</word>
-    <word id="24" info="существительное в единственном числе">think</word>
-    <word id="26" info="существительное в единственном числе">shakespeare</word>
-    <word id="29" info="существительное в единственном числе">guy</word>
-    <word id="30" info="глагол, герундий/причастие настоящего времени">seething</word>
-    <word id="33" info="прилагательное">much</word>
-    <word id="34" info="существительное в единственном числе">passion</word>
-    <word id="38" info="наречие">barely</word>
-    <word id="39" info="существительное в единственном числе">write</word>
-    <word id="41" info="существительное в единственном числе">play</word>
-    <word id="42" info="предлог/подчинительный союз">without</word>
-    <word id="43" info="глагол, герундий/причастие настоящего времени">exploding</word>
-    <word id="46" info="существительное в единственном числе">passionate</word>
-    <word id="48" info="прилагательное">introspective</word>
-    <word id="49" info="существительное в единственном числе">verbal</word>
-    <word id="50" info="существительное в единственном числе">couplet</word>
-    <word id="52" info="существительное в единственном числе">iambic</word>
-    <word id="53" info="существительное в единственном числе">pentameter</word>
+    <word id="1" info="наречие">also</word>
+    <word id="2" info="глагол, прошедшее время">wanted</word>
+    <word id="3" info="существительное в единственном числе">poke</word>
+    <word id="4" info="существительное в единственном числе">fun</word>
+    <word id="5" info="существительное в единственном числе">way</word>
+    <word id="6" info="местоимение">us</word>
+    <word id="7" info="существительное в единственном числе">envision</word>
+    <word id="8" info="существительное в единственном числе">shakespeare</word>
+    <word id="9" info="существительное в единственном числе">mean</word>
+    <word id="10" info="наречие">really</word>
+    <word id="11" info="наречие">n't</word>
+    <word id="12" info="существительное в единственном числе">think</word>
+    <word id="13" info="существительное в единственном числе">shakespeare</word>
+    <word id="14" info="существительное в единственном числе">guy</word>
+    <word id="15" info="глагол, герундий/причастие настоящего времени">seething</word>
+    <word id="16" info="прилагательное">much</word>
+    <word id="17" info="существительное в единственном числе">passion</word>
+    <word id="18" info="наречие">barely</word>
+    <word id="19" info="существительное в единственном числе">write</word>
+    <word id="20" info="существительное в единственном числе">play</word>
+    <word id="21" info="предлог/подчинительный союз">without</word>
+    <word id="22" info="глагол, герундий/причастие настоящего времени">exploding</word>
+    <word id="23" info="существительное в единственном числе">passionate</word>
+    <word id="24" info="прилагательное">introspective</word>
+    <word id="25" info="существительное в единственном числе">verbal</word>
+    <word id="26" info="существительное в единственном числе">couplet</word>
+    <word id="27" info="существительное в единственном числе">iambic</word>
+    <word id="28" info="существительное в единственном числе">pentameter</word>
   </sentence>
   <sentence id="3">
     <word id="1" info="существительное в единственном числе">stoppard</word>
-    <word id="3" info="существительное в единственном числе">norman</word>
-    <word id="5" info="существительное во множественном числе">men</word>
-    <word id="7" info="существительное в единственном числе">love</word>
-    <word id="8" info="существительное в единственном числе">shakespeare</word>
-    <word id="12" info="глагол, прошедшее время">wanted</word>
-    <word id="14" info="глагол, базовая форма">make</word>
-    <word id="16" info="существительное в единственном числе">movie</word>
-    <word id="18" info="существительное в единственном числе">everyone</word>
-    <word id="19" info="наречие">else</word>
-    <word id="21" info="существительное во множественном числе">loves</word>
-    <word id="22" info="существительное в единственном числе">shakespeare</word>
+    <word id="2" info="существительное в единственном числе">norman</word>
+    <word id="3" info="существительное во множественном числе">men</word>
+    <word id="4" info="существительное в единственном числе">love</word>
+    <word id="5" info="существительное в единственном числе">shakespeare</word>
+    <word id="6" info="глагол, прошедшее время">wanted</word>
+    <word id="7" info="глагол, базовая форма">make</word>
+    <word id="8" info="существительное в единственном числе">movie</word>
+    <word id="9" info="существительное в единственном числе">everyone</word>
+    <word id="10" info="наречие">else</word>
+    <word id="11" info="существительное во множественном числе">loves</word>
+    <word id="12" info="существительное в единственном числе">shakespeare</word>
   </sentence>
   <sentence id="4">
-    <word id="3" info="предлог/подчинительный союз">despite</word>
-    <word id="5" info="существительное в единственном числе">difficulty</word>
-    <word id="8" info="существительное в единственном числе">task</word>
-    <word id="12" info="глагол, причастие прошедшего времени">succeeded</word>
+    <word id="1" info="предлог/подчинительный союз">despite</word>
+    <word id="2" info="существительное в единственном числе">difficulty</word>
+    <word id="3" info="существительное в единственном числе">task</word>
+    <word id="4" info="глагол, причастие прошедшего времени">succeeded</word>
   </sentence>
   <sentence id="5">
     <word id="1" info="существительное в единственном числе">shakespeare</word>
-    <word id="3" info="существительное в единственном числе">love</word>
-    <word id="5" info="цифра">one</word>
-    <word id="8" info="существительное в единственном числе">smartest</word>
-    <word id="10" info="существительное в единственном числе">funniest</word>
-    <word id="13" info="глагол, герундий/причастие настоящего времени">touching</word>
-    <word id="14" info="существительное во множественном числе">films</word>
-    <word id="17" info="существительное в единственном числе">year</word>
+    <word id="2" info="существительное в единственном числе">love</word>
+    <word id="3" info="цифра">one</word>
+    <word id="4" info="существительное в единственном числе">smartest</word>
+    <word id="5" info="существительное в единственном числе">funniest</word>
+    <word id="6" info="глагол, герундий/причастие настоящего времени">touching</word>
+    <word id="7" info="существительное во множественном числе">films</word>
+    <word id="8" info="существительное в единственном числе">year</word>
   </sentence>
   <sentence id="6">
-    <word id="2" info="притяжательное окончание">'s</word>
-    <word id="4" info="существительное в единственном числе">rare</word>
-    <word id="7" info="существительное в единственном числе">picture</word>
-    <word id="10" info="прилагательное">high</word>
-    <word id="11" info="существительное во множественном числе">aspirations</word>
-    <word id="12" info="глагол, поющий в 3-м лице. настоящее принимает">succeeds</word>
-    <word id="17" info="существительное во множественном числе">endeavors</word>
-    <word id="24" info="существительное в единственном числе">movie</word>
-    <word id="26" info="существительное во множественном числе">defines</word>
-    <word id="27" info="существительное в единственном числе">success</word>
-    <word id="33" info="наречие">charmingly</word>
-    <word id="34" info="глагол, причастие прошедшего времени">acted</word>
-    <word id="36" info="наречие">flawlessly</word>
-    <word id="37" info="глагол, причастие прошедшего времени">written</word>
+    <word id="1" info="притяжательное окончание">'s</word>
+    <word id="2" info="существительное в единственном числе">rare</word>
+    <word id="3" info="существительное в единственном числе">picture</word>
+    <word id="4" info="прилагательное">high</word>
+    <word id="5" info="существительное во множественном числе">aspirations</word>
+    <word id="6" info="глагол, поющий в 3-м лице. настоящее принимает">succeeds</word>
+    <word id="7" info="существительное во множественном числе">endeavors</word>
+    <word id="8" info="существительное в единственном числе">movie</word>
+    <word id="9" info="существительное во множественном числе">defines</word>
+    <word id="10" info="существительное в единственном числе">success</word>
+    <word id="11" info="наречие">charmingly</word>
+    <word id="12" info="глагол, причастие прошедшего времени">acted</word>
+    <word id="13" info="наречие">flawlessly</word>
+    <word id="14" info="глагол, причастие прошедшего времени">written</word>
   </sentence>
   <sentence id="7">
-    <word id="2" info="модальный глагол">could</word>
-    <word id="6" info="существительное в единственном числе">smug</word>
-    <word id="8" info="прилагательное">self-important</word>
-    <word id="9" info="существительное в единственном числе">movie</word>
-    <word id="11" info="существительное во множественном числе">panders</word>
-    <word id="13" info="существительное в единственном числе">die-hard</word>
-    <word id="14" info="существительное в единственном числе">shakespeare</word>
-    <word id="15" info="существительное во множественном числе">fans</word>
-    <word id="19" info="существительное в единственном числе">appeal</word>
-    <word id="22" info="существительное в единственном числе">film</word>
-    <word id="24" info="наречие">almost</word>
-    <word id="25" info="существительное в единственном числе">universal</word>
-    <word id="29" info="глагол, петь. настоящее, не трехмерное действие">'ve</word>
-    <word id="30" info="наречие">ever</word>
-    <word id="31" info="существительное в единственном числе">read</word>
-    <word id="33" info="существительное в единственном числе">play</word>
-    <word id="35" info="существительное в единственном числе">shakespeare</word>
-    <word id="38" info="глагол, базовая форма">know</word>
-    <word id="39" info="существительное в единственном числе">anything</word>
-    <word id="42" info="существительное в единственном числе">life</word>
-    <word id="45" info="притяжательное окончание">'s</word>
-    <word id="46" info="прилагательное">likely</word>
-    <word id="49" info="модальный глагол">'ll</word>
-    <word id="50" info="глагол, базовая форма">find</word>
-    <word id="51" info="прилагательное">grand</word>
-    <word id="52" info="существительное в единственном числе">entertainment</word>
-    <word id="54" info="существительное в единственном числе">shakespeare</word>
-    <word id="56" info="существительное в единственном числе">love</word>
+    <word id="1" info="модальный глагол">could</word>
+    <word id="2" info="существительное в единственном числе">smug</word>
+    <word id="3" info="прилагательное">self-important</word>
+    <word id="4" info="существительное в единственном числе">movie</word>
+    <word id="5" info="существительное во множественном числе">panders</word>
+    <word id="6" info="существительное в единственном числе">die-hard</word>
+    <word id="7" info="существительное в единственном числе">shakespeare</word>
+    <word id="8" info="существительное во множественном числе">fans</word>
+    <word id="9" info="существительное в единственном числе">appeal</word>
+    <word id="10" info="существительное в единственном числе">film</word>
+    <word id="11" info="наречие">almost</word>
+    <word id="12" info="существительное в единственном числе">universal</word>
+    <word id="13" info="глагол, петь. настоящее, не трехмерное действие">'ve</word>
+    <word id="14" info="наречие">ever</word>
+    <word id="15" info="существительное в единственном числе">read</word>
+    <word id="16" info="существительное в единственном числе">play</word>
+    <word id="17" info="существительное в единственном числе">shakespeare</word>
+    <word id="18" info="глагол, базовая форма">know</word>
+    <word id="19" info="существительное в единственном числе">anything</word>
+    <word id="20" info="существительное в единственном числе">life</word>
+    <word id="21" info="притяжательное окончание">'s</word>
+    <word id="22" info="прилагательное">likely</word>
+    <word id="23" info="модальный глагол">'ll</word>
+    <word id="24" info="глагол, базовая форма">find</word>
+    <word id="25" info="прилагательное">grand</word>
+    <word id="26" info="существительное в единственном числе">entertainment</word>
+    <word id="27" info="существительное в единственном числе">shakespeare</word>
+    <word id="28" info="существительное в единственном числе">love</word>
   </sentence>
   <sentence id="8">
     <word id="1" info="существительное в единственном числе">joseph</word>
     <word id="2" info="существительное во множественном числе">fiennes</word>
-    <word id="4" info="существительное в единственном числе">brother</word>
-    <word id="6" info="существительное в единственном числе">ralph</word>
-    <word id="8" info="существительное во множественном числе">stars</word>
-    <word id="10" info="существительное в единственном числе">shakespeare</word>
-    <word id="14" info="притяжательное окончание">'s</word>
-    <word id="16" info="существительное в единственном числе">delightful</word>
-    <word id="18" info="прилагательное">irresistible</word>
-    <word id="19" info="существительное в единственном числе">lad</word>
-    <word id="21" info="прилагательное">concerned</word>
-    <word id="22" info="наречие">mostly</word>
-    <word id="24" info="существительное во множественном числе">women</word>
-    <word id="26" info="глагол, причастие прошедшего времени">detached</word>
-    <word id="28" info="существительное в единственном числе">life</word>
-    <word id="29" info="притяжательное окончание">'s</word>
-    <word id="31" info="прилагательное">serious</word>
-    <word id="32" info="существительное во множественном числе">problems</word>
-    <word id="34" info="существительное в единственном числе">debt</word>
-    <word id="36" info="существительное в единственном числе">plague</word>
-    <word id="38" info="существительное в единственном числе">etc</word>
+    <word id="3" info="существительное в единственном числе">brother</word>
+    <word id="4" info="существительное в единственном числе">ralph</word>
+    <word id="5" info="существительное во множественном числе">stars</word>
+    <word id="6" info="существительное в единственном числе">shakespeare</word>
+    <word id="7" info="притяжательное окончание">'s</word>
+    <word id="8" info="существительное в единственном числе">delightful</word>
+    <word id="9" info="прилагательное">irresistible</word>
+    <word id="10" info="существительное в единственном числе">lad</word>
+    <word id="11" info="прилагательное">concerned</word>
+    <word id="12" info="наречие">mostly</word>
+    <word id="13" info="существительное во множественном числе">women</word>
+    <word id="14" info="глагол, причастие прошедшего времени">detached</word>
+    <word id="15" info="существительное в единственном числе">life</word>
+    <word id="16" info="притяжательное окончание">'s</word>
+    <word id="17" info="прилагательное">serious</word>
+    <word id="18" info="существительное во множественном числе">problems</word>
+    <word id="19" info="существительное в единственном числе">debt</word>
+    <word id="20" info="существительное в единственном числе">plague</word>
+    <word id="21" info="существительное в единственном числе">etc</word>
   </sentence>
-  <sentence id="9"/>
+  <sentence id="9">
+    <word id="1" info="притяжательное окончание">'s</word>
+    <word id="2" info="глагол, причастие прошедшего времени">commissioned</word>
+    <word id="3" info="существительное в единственном числе">write</word>
+    <word id="4" info="существительное во множественном числе">plays</word>
+    <word id="5" info="прилагательное">various</word>
+    <word id="6" info="существительное во множественном числе">people</word>
+    <word id="7" info="существительное в единственном числе">queen</word>
+    <word id="8" info="существительное во множественном числе">elizabeth</word>
+    <word id="9" info="существительное в единственном числе">judi</word>
+    <word id="10" info="существительное в единственном числе">dench</word>
+    <word id="11" info="глагол, поющий в 3-м лице. настоящее принимает">wants</word>
+    <word id="12" info="существительное во множественном числе">comedies</word>
+    <word id="13" info="прилагательное">local</word>
+    <word id="14" info="существительное в единственном числе">slimeball</word>
+    <word id="15" info="существительное в единственном числе">philip</word>
+    <word id="16" info="существительное в единственном числе">henslowe</word>
+    <word id="17" info="существительное в единственном числе">geoffrey</word>
+    <word id="18" info="существительное в единственном числе">rush</word>
+    <word id="19" info="существительное во множественном числе">needs</word>
+    <word id="20" info="существительное в единственном числе">write</word>
+    <word id="21" info="существительное в единственном числе">play</word>
+    <word id="22" info="существительное в единственном числе">pay</word>
+    <word id="23" info="существительное во множественном числе">debts</word>
+    <word id="24" info="существительное в единственном числе">hugh</word>
+    <word id="25" info="существительное в единственном числе">fennymann</word>
+    <word id="26" info="существительное в единственном числе">tom</word>
+    <word id="27" info="существительное в единственном числе">wilkinson</word>
+  </sentence>
   <sentence id="10">
-    <word id="2" info="притяжательное окончание">'s</word>
-    <word id="3" info="глагол, причастие прошедшего времени">commissioned</word>
-    <word id="5" info="существительное в единственном числе">write</word>
-    <word id="6" info="существительное во множественном числе">plays</word>
-    <word id="8" info="прилагательное">various</word>
-    <word id="9" info="существительное во множественном числе">people</word>
-    <word id="11" info="существительное в единственном числе">queen</word>
-    <word id="12" info="существительное во множественном числе">elizabeth</word>
-    <word id="14" info="существительное в единственном числе">judi</word>
-    <word id="15" info="существительное в единственном числе">dench</word>
-    <word id="17" info="глагол, поющий в 3-м лице. настоящее принимает">wants</word>
-    <word id="18" info="существительное во множественном числе">comedies</word>
-    <word id="21" info="прилагательное">local</word>
-    <word id="22" info="существительное в единственном числе">slimeball</word>
-    <word id="23" info="существительное в единственном числе">philip</word>
-    <word id="24" info="существительное в единственном числе">henslowe</word>
-    <word id="26" info="существительное в единственном числе">geoffrey</word>
-    <word id="27" info="существительное в единственном числе">rush</word>
-    <word id="29" info="существительное во множественном числе">needs</word>
-    <word id="32" info="существительное в единственном числе">write</word>
-    <word id="34" info="существительное в единственном числе">play</word>
-    <word id="39" info="существительное в единственном числе">pay</word>
-    <word id="42" info="существительное во множественном числе">debts</word>
-    <word id="44" info="существительное в единственном числе">hugh</word>
-    <word id="45" info="существительное в единственном числе">fennymann</word>
-    <word id="47" info="существительное в единственном числе">tom</word>
-    <word id="48" info="существительное в единственном числе">wilkinson</word>
+    <word id="1" info="существительное в единственном числе">shakespeare</word>
+    <word id="2" info="наречие">however</word>
+    <word id="3" info="существительное в единственном числе">trouble</word>
+    <word id="4" info="глагол, герундий/причастие настоящего времени">focusing</word>
+    <word id="5" info="существительное в единственном числе">work</word>
   </sentence>
   <sentence id="11">
-    <word id="1" info="существительное в единственном числе">shakespeare</word>
-    <word id="3" info="наречие">however</word>
-    <word id="6" info="существительное в единственном числе">trouble</word>
-    <word id="7" info="глагол, герундий/причастие настоящего времени">focusing</word>
-    <word id="10" info="существительное в единственном числе">work</word>
+    <word id="1" info="существительное во множественном числе">begins</word>
+    <word id="2" info="существительное в единственном числе">work</word>
+    <word id="3" info="существительное в единственном числе">comedy</word>
+    <word id="4" info="существительное в единственном числе">boy</word>
+    <word id="5" info="глагол, причастие прошедшего времени">named</word>
+    <word id="6" info="существительное в единственном числе">romeo</word>
+    <word id="7" info="существительное в единственном числе">girl</word>
+    <word id="8" info="глагол, причастие прошедшего времени">named</word>
+    <word id="9" info="существительное в единственном числе">ethel</word>
   </sentence>
   <sentence id="12">
-    <word id="2" info="существительное во множественном числе">begins</word>
-    <word id="3" info="существительное в единственном числе">work</word>
-    <word id="6" info="существительное в единственном числе">comedy</word>
-    <word id="9" info="существительное в единственном числе">boy</word>
-    <word id="10" info="глагол, причастие прошедшего времени">named</word>
-    <word id="11" info="существительное в единственном числе">romeo</word>
-    <word id="14" info="существительное в единственном числе">girl</word>
-    <word id="15" info="глагол, причастие прошедшего времени">named</word>
-    <word id="16" info="существительное в единственном числе">ethel</word>
+    <word id="1" info="существительное во множественном числе">changes</word>
+    <word id="2" info="наречие">however</word>
+    <word id="3" info="существительное во множественном числе">meets</word>
+    <word id="4" info="существительное в единственном числе">viola</word>
+    <word id="5" info="существительное во множественном числе">de</word>
+    <word id="6" info="существительное во множественном числе">lesseps</word>
+    <word id="7" info="существительное в единственном числе">radiant</word>
+    <word id="8" info="существительное во множественном числе">gwyneth</word>
+    <word id="9" info="существительное в единственном числе">paltrow</word>
+    <word id="10" info="прилагательное">young</word>
+    <word id="11" info="существительное в единственном числе">heiress</word>
+    <word id="12" info="существительное в единственном числе">set</word>
+    <word id="13" info="существительное в единственном числе">marry</word>
+    <word id="14" info="прилагательное">financially-oriented</word>
+    <word id="15" info="существительное в единственном числе">lord</word>
+    <word id="16" info="существительное в единственном числе">wessex</word>
+    <word id="17" info="существительное в единственном числе">colin</word>
+    <word id="18" info="существительное в единственном числе">firth</word>
   </sentence>
   <sentence id="13">
-    <word id="3" info="существительное во множественном числе">changes</word>
-    <word id="5" info="наречие">however</word>
-    <word id="9" info="существительное во множественном числе">meets</word>
-    <word id="10" info="существительное в единственном числе">viola</word>
-    <word id="11" info="существительное во множественном числе">de</word>
-    <word id="12" info="существительное во множественном числе">lesseps</word>
-    <word id="15" info="существительное в единственном числе">radiant</word>
-    <word id="16" info="существительное во множественном числе">gwyneth</word>
-    <word id="17" info="существительное в единственном числе">paltrow</word>
-    <word id="21" info="прилагательное">young</word>
-    <word id="22" info="существительное в единственном числе">heiress</word>
-    <word id="23" info="существительное в единственном числе">set</word>
-    <word id="25" info="существительное в единственном числе">marry</word>
-    <word id="27" info="прилагательное">financially-oriented</word>
-    <word id="28" info="существительное в единственном числе">lord</word>
-    <word id="29" info="существительное в единственном числе">wessex</word>
-    <word id="31" info="существительное в единственном числе">colin</word>
-    <word id="32" info="существительное в единственном числе">firth</word>
-  </sentence>
-  <sentence id="14">
     <word id="1" info="существительное в единственном числе">shakespeare</word>
     <word id="2" info="наречие">instantly</word>
     <word id="3" info="существительное во множественном числе">falls</word>
-    <word id="5" info="существительное в единственном числе">love</word>
-    <word id="10" info="наречие">first</word>
-    <word id="11" info="существительное во множественном числе">meets</word>
-    <word id="15" info="существительное во множественном числе">pretends</word>
-    <word id="19" info="существительное в единственном числе">man</word>
-    <word id="21" info="существительное в единственном числе">try</word>
-    <word id="25" info="существительное в единственном числе">part</word>
-    <word id="27" info="существительное в единственном числе">romeo</word>
+    <word id="4" info="существительное в единственном числе">love</word>
+    <word id="5" info="наречие">first</word>
+    <word id="6" info="существительное во множественном числе">meets</word>
+    <word id="7" info="существительное во множественном числе">pretends</word>
+    <word id="8" info="существительное в единственном числе">man</word>
+    <word id="9" info="существительное в единственном числе">try</word>
+    <word id="10" info="существительное в единственном числе">part</word>
+    <word id="11" info="существительное в единственном числе">romeo</word>
+  </sentence>
+  <sentence id="14">
+    <word id="1" info="существительное во множественном числе">discovers</word>
+    <word id="2" info="существительное в единственном числе">identity</word>
+    <word id="3" info="существительное во множественном числе">confronts</word>
+    <word id="4" info="наречие">later</word>
+    <word id="5" info="существительное в единственном числе">course</word>
+    <word id="6" info="существительное во множественном числе">falls</word>
+    <word id="7" info="существительное в единственном числе">love</word>
+    <word id="8" info="предлог/подчинительный союз">although</word>
+    <word id="9" info="существительное в единственном числе">love</word>
+    <word id="10" info="глагол, причастие прошедшего времени">doomed</word>
+    <word id="11" info="наречие">absolutely</word>
+    <word id="12" info="модальный глагол">must</word>
+    <word id="13" info="существительное в единственном числе">marry</word>
+    <word id="14" info="прилагательное">tyrannical</word>
+    <word id="15" info="существительное в единственном числе">lord</word>
+    <word id="16" info="существительное в единственном числе">wessex</word>
   </sentence>
   <sentence id="15">
-    <word id="2" info="существительное во множественном числе">discovers</word>
-    <word id="4" info="существительное в единственном числе">identity</word>
-    <word id="6" info="существительное во множественном числе">confronts</word>
-    <word id="8" info="наречие">later</word>
-    <word id="13" info="существительное в единственном числе">course</word>
-    <word id="15" info="существительное во множественном числе">falls</word>
-    <word id="17" info="существительное в единственном числе">love</word>
-    <word id="21" info="предлог/подчинительный союз">although</word>
-    <word id="23" info="существительное в единственном числе">love</word>
-    <word id="25" info="глагол, причастие прошедшего времени">doomed</word>
-    <word id="28" info="наречие">absolutely</word>
-    <word id="29" info="модальный глагол">must</word>
-    <word id="30" info="существительное в единственном числе">marry</word>
-    <word id="32" info="прилагательное">tyrannical</word>
-    <word id="33" info="существительное в единственном числе">lord</word>
-    <word id="34" info="существительное в единственном числе">wessex</word>
+    <word id="1" info="глагол, поющий в 3-м лице. настоящее принимает">continues</word>
+    <word id="2" info="существительное в единственном числе">act</word>
+    <word id="3" info="существительное во множественном числе">loves</word>
+    <word id="4" info="существительное в единственном числе">shakespeare</word>
+    <word id="5" info="притяжательное окончание">'s</word>
+    <word id="6" info="глагол, герундий/причастие настоящего времени">writing</word>
+    <word id="7" info="прилагательное">much</word>
+    <word id="8" info="наречие">soon</word>
+    <word id="9" info="существительное в единственном числе">production</word>
+    <word id="10" info="наречие">later</word>
+    <word id="11" info="существительное во множественном числе">becomes</word>
+    <word id="12" info="существительное в единственном числе">romeo</word>
+    <word id="13" info="существительное в единственном числе">juliet</word>
+    <word id="14" info="существительное в единственном числе">set</word>
+    <word id="15" info="глагол, причастие прошедшего времени">performed</word>
   </sentence>
   <sentence id="16">
-    <word id="3" info="глагол, поющий в 3-м лице. настоящее принимает">continues</word>
-    <word id="5" info="существительное в единственном числе">act</word>
-    <word id="8" info="существительное во множественном числе">loves</word>
-    <word id="9" info="существительное в единственном числе">shakespeare</word>
-    <word id="10" info="притяжательное окончание">'s</word>
-    <word id="11" info="глагол, герундий/причастие настоящего времени">writing</word>
-    <word id="13" info="прилагательное">much</word>
-    <word id="16" info="наречие">soon</word>
-    <word id="18" info="существительное в единственном числе">production</word>
-    <word id="21" info="наречие">later</word>
-    <word id="22" info="существительное во множественном числе">becomes</word>
-    <word id="23" info="существительное в единственном числе">romeo</word>
-    <word id="25" info="существительное в единственном числе">juliet</word>
-    <word id="28" info="существительное в единственном числе">set</word>
-    <word id="31" info="глагол, причастие прошедшего времени">performed</word>
+    <word id="1" info="существительное в единственном числе">shakespeare</word>
+    <word id="2" info="существительное в единственном числе">love</word>
+    <word id="3" info="наречие">amazingly</word>
+    <word id="4" info="прилагательное">good</word>
+    <word id="5" info="существительное в единственном числе">film</word>
+    <word id="6" info="существительное во множественном числе">works</word>
+    <word id="7" info="прилагательное">great</word>
+    <word id="8" info="существительное в единственном числе">entertainment</word>
+    <word id="9" info="существительное во множественном числе">pays</word>
+    <word id="10" info="существительное в единственном числе">attention</word>
+    <word id="11" info="существительное в единственном числе">detail</word>
+    <word id="12" info="существительное во множественном числе">knows</word>
+    <word id="13" info="существительное в единственном числе">subject</word>
+    <word id="14" info="существительное в единственном числе">matter</word>
   </sentence>
   <sentence id="17">
-    <word id="1" info="существительное в единственном числе">shakespeare</word>
-    <word id="3" info="существительное в единственном числе">love</word>
-    <word id="6" info="наречие">amazingly</word>
-    <word id="7" info="прилагательное">good</word>
-    <word id="8" info="существительное в единственном числе">film</word>
-    <word id="13" info="существительное во множественном числе">works</word>
-    <word id="15" info="прилагательное">great</word>
-    <word id="16" info="существительное в единственном числе">entertainment</word>
-    <word id="21" info="существительное во множественном числе">pays</word>
+    <word id="1" info="наречие">instantly</word>
+    <word id="2" info="существительное в единственном числе">joseph</word>
+    <word id="3" info="существительное во множественном числе">fiennes</word>
+    <word id="4" info="существительное в единственном числе">lead</word>
+    <word id="5" info="существительное в единственном числе">role</word>
+    <word id="6" info="глагол, герундий/причастие настоящего времени">searing</word>
+    <word id="7" info="существительное в единственном числе">optimism</word>
+    <word id="8" info="существительное в единственном числе">energy</word>
+    <word id="9" info="притяжательное окончание">'s</word>
+    <word id="10" info="наречие">clearly</word>
+    <word id="11" info="существительное в единственном числе">man</word>
+    <word id="12" info="существительное во множественном числе">admires</word>
+    <word id="13" info="существительное в единственном числе">shakespeare</word>
+    <word id="14" info="наречие">even</word>
+    <word id="15" info="существительное во множественном числе">shortcomings</word>
+    <word id="16" info="глагол, поющий в 3-м лице. настоящее принимает">gives</word>
+    <word id="17" info="существительное в единственном числе">character</word>
+    <word id="18" info="существительное в единственном числе">inability</word>
+    <word id="19" info="существительное в единственном числе">turn</word>
+    <word id="20" info="наречие">away</word>
+    <word id="21" info="существительное во множественном числе">women</word>
     <word id="22" info="существительное в единственном числе">attention</word>
-    <word id="24" info="существительное в единственном числе">detail</word>
-    <word id="26" info="существительное во множественном числе">knows</word>
-    <word id="28" info="существительное в единственном числе">subject</word>
-    <word id="29" info="существительное в единственном числе">matter</word>
+    <word id="23" info="существительное в единственном числе">deficit</word>
+    <word id="24" info="существительное в единственном числе">disorder</word>
+    <word id="25" info="существительное в единственном числе">sense</word>
+    <word id="26" info="прилагательное">great</word>
+    <word id="27" info="существительное в единственном числе">deal</word>
+    <word id="28" info="существительное в единственном числе">affection</word>
+    <word id="29" info="существительное в единственном числе">care</word>
   </sentence>
   <sentence id="18">
-    <word id="3" info="наречие">instantly</word>
-    <word id="7" info="существительное в единственном числе">joseph</word>
-    <word id="8" info="существительное во множественном числе">fiennes</word>
-    <word id="11" info="существительное в единственном числе">lead</word>
-    <word id="12" info="существительное в единственном числе">role</word>
-    <word id="17" info="глагол, герундий/причастие настоящего времени">searing</word>
-    <word id="18" info="существительное в единственном числе">optimism</word>
-    <word id="20" info="существительное в единственном числе">energy</word>
-    <word id="23" info="притяжательное окончание">'s</word>
-    <word id="24" info="наречие">clearly</word>
-    <word id="26" info="существительное в единственном числе">man</word>
-    <word id="28" info="существительное во множественном числе">admires</word>
-    <word id="29" info="существительное в единственном числе">shakespeare</word>
-    <word id="32" info="наречие">even</word>
-    <word id="35" info="существительное во множественном числе">shortcomings</word>
-    <word id="38" info="глагол, поющий в 3-м лице. настоящее принимает">gives</word>
-    <word id="40" info="существительное в единственном числе">character</word>
-    <word id="42" info="существительное в единственном числе">inability</word>
-    <word id="44" info="существительное в единственном числе">turn</word>
-    <word id="45" info="наречие">away</word>
-    <word id="47" info="существительное во множественном числе">women</word>
-    <word id="49" info="существительное в единственном числе">attention</word>
-    <word id="50" info="существительное в единственном числе">deficit</word>
-    <word id="51" info="существительное в единственном числе">disorder</word>
-    <word id="55" info="существительное в единственном числе">sense</word>
-    <word id="57" info="прилагательное">great</word>
-    <word id="58" info="существительное в единственном числе">deal</word>
-    <word id="60" info="существительное в единственном числе">affection</word>
-    <word id="62" info="существительное в единственном числе">care</word>
+    <word id="1" info="наречие">practically</word>
+    <word id="2" info="существительное во множественном числе">overflows</word>
+    <word id="3" info="существительное в единственном числе">passion</word>
+    <word id="4" info="определитель">every</word>
+    <word id="5" info="существительное в единственном числе">scene</word>
   </sentence>
   <sentence id="19">
-    <word id="2" info="наречие">practically</word>
-    <word id="3" info="существительное во множественном числе">overflows</word>
-    <word id="5" info="существительное в единственном числе">passion</word>
-    <word id="7" info="определитель">every</word>
-    <word id="8" info="существительное в единственном числе">scene</word>
+    <word id="1" info="существительное во множественном числе">fiennes</word>
+    <word id="2" info="глагол, причастие прошедшего времени">matched</word>
+    <word id="3" info="существительное в единственном числе">paltrow</word>
+    <word id="4" info="прилагательное">english</word>
+    <word id="5" info="существительное в единственном числе">accent</word>
+    <word id="6" info="прилагательное">good</word>
+    <word id="7" info="существительное в единственном числе">wonder</word>
+    <word id="8" info="наречие">actually</word>
+    <word id="9" info="глагол, поющий в 3-м лице. настоящее принимает">comes</word>
+    <word id="10" info="существительное в единственном числе">actress</word>
+    <word id="11" info="существительное во множественном числе">exudes</word>
+    <word id="12" info="существительное в единственном числе">strength</word>
+    <word id="13" info="существительное в единственном числе">conviction</word>
+    <word id="14" info="определитель">every</word>
+    <word id="15" info="существительное в единственном числе">performance</word>
+    <word id="16" info="глагол, петь. настоящее, не трехмерное действие">'ve</word>
+    <word id="17" info="глагол, причастие прошедшего времени">seen</word>
   </sentence>
   <sentence id="20">
-    <word id="1" info="существительное во множественном числе">fiennes</word>
-    <word id="3" info="глагол, причастие прошедшего времени">matched</word>
-    <word id="5" info="существительное в единственном числе">paltrow</word>
-    <word id="8" info="прилагательное">english</word>
-    <word id="9" info="существительное в единственном числе">accent</word>
-    <word id="12" info="прилагательное">good</word>
-    <word id="14" info="существительное в единственном числе">wonder</word>
-    <word id="17" info="наречие">actually</word>
-    <word id="18" info="глагол, поющий в 3-м лице. настоящее принимает">comes</word>
-    <word id="25" info="существительное в единственном числе">actress</word>
-    <word id="27" info="существительное во множественном числе">exudes</word>
-    <word id="28" info="существительное в единственном числе">strength</word>
-    <word id="30" info="существительное в единственном числе">conviction</word>
-    <word id="32" info="определитель">every</word>
-    <word id="33" info="существительное в единственном числе">performance</word>
-    <word id="35" info="глагол, петь. настоящее, не трехмерное действие">'ve</word>
-    <word id="36" info="глагол, причастие прошедшего времени">seen</word>
+    <word id="1" info="цифра">two</word>
+    <word id="2" info="существительное во множественном числе">performers</word>
+    <word id="3" info="существительное в единственном числе">work</word>
+    <word id="4" info="наречие">perfectly</word>
+    <word id="5" info="наречие">together</word>
+    <word id="6" info="глагол, герундий/причастие настоящего времени">taking</word>
+    <word id="7" info="существительное в единственном числе">passionate</word>
+    <word id="8" info="существительное во множественном числе">scenes</word>
+    <word id="9" info="наречие">far</word>
+    <word id="10" info="прилагательное">possible</word>
+    <word id="11" info="предлог/подчинительный союз">without</word>
+    <word id="12" info="глагол, герундий/причастие настоящего времени">making</word>
+    <word id="13" info="прилагательное">melodramatic</word>
+    <word id="14" info="глагол, герундий/причастие настоящего времени">wringing</word>
+    <word id="15" info="существительное в единственном числе">comedic</word>
+    <word id="16" info="существительное во множественном числе">scenes</word>
+    <word id="17" info="определитель">every</word>
+    <word id="18" info="прилагательное">conceivable</word>
+    <word id="19" info="существительное в единственном числе">laugh</word>
   </sentence>
   <sentence id="21">
-    <word id="2" info="цифра">two</word>
-    <word id="3" info="существительное во множественном числе">performers</word>
-    <word id="4" info="существительное в единственном числе">work</word>
-    <word id="5" info="наречие">perfectly</word>
-    <word id="6" info="наречие">together</word>
-    <word id="8" info="глагол, герундий/причастие настоящего времени">taking</word>
-    <word id="10" info="существительное в единственном числе">passionate</word>
-    <word id="11" info="существительное во множественном числе">scenes</word>
-    <word id="13" info="наречие">far</word>
-    <word id="15" info="прилагательное">possible</word>
-    <word id="16" info="предлог/подчинительный союз">without</word>
-    <word id="17" info="глагол, герундий/причастие настоящего времени">making</word>
-    <word id="19" info="прилагательное">melodramatic</word>
-    <word id="22" info="глагол, герундий/причастие настоящего времени">wringing</word>
-    <word id="24" info="существительное в единственном числе">comedic</word>
-    <word id="25" info="существительное во множественном числе">scenes</word>
-    <word id="27" info="определитель">every</word>
-    <word id="28" info="прилагательное">conceivable</word>
-    <word id="29" info="существительное в единственном числе">laugh</word>
+    <word id="1" info="существительное в единственном числе">course</word>
+    <word id="2" info="наречие">n't</word>
+    <word id="3" info="существительное в единственном числе">hurt</word>
+    <word id="4" info="существительное в единственном числе">masterful</word>
+    <word id="5" info="существительное в единственном числе">script</word>
+    <word id="6" info="существительное в единственном числе">work</word>
   </sentence>
   <sentence id="22">
-    <word id="2" info="существительное в единственном числе">course</word>
-    <word id="6" info="наречие">n't</word>
-    <word id="7" info="существительное в единственном числе">hurt</word>
-    <word id="12" info="существительное в единственном числе">masterful</word>
-    <word id="13" info="существительное в единственном числе">script</word>
-    <word id="15" info="существительное в единственном числе">work</word>
+    <word id="1" info="существительное в единственном числе">stoppard</word>
+    <word id="2" info="существительное в единственном числе">play</word>
+    <word id="3" info="существительное в единственном числе">rozencrantz</word>
+    <word id="4" info="существительное в единственном числе">guildenstern</word>
+    <word id="5" info="прилагательное">dead</word>
+    <word id="6" info="глагол, причастие прошедшего времени">inspired</word>
+    <word id="7" info="глагол, герундий/причастие настоящего времени">interesting</word>
+    <word id="8" info="существительное в единственном числе">film</word>
+    <word id="9" info="прилагательное">full</word>
+    <word id="10" info="существительное в единственном числе">dry</word>
+    <word id="11" info="существительное в единственном числе">wit</word>
+    <word id="12" info="существительное в единственном числе">boundless</word>
+    <word id="13" info="прилагательное">understated</word>
+    <word id="14" info="существительное в единственном числе">humor</word>
+    <word id="15" info="существительное во множественном числе">plays</word>
+    <word id="16" info="наречие">similarly</word>
+    <word id="17" info="существительное в единственном числе">dry</word>
+    <word id="18" info="существительное в единственном числе">humor</word>
   </sentence>
   <sentence id="23">
-    <word id="1" info="существительное в единственном числе">stoppard</word>
-    <word id="4" info="существительное в единственном числе">play</word>
-    <word id="5" info="существительное в единственном числе">rozencrantz</word>
-    <word id="7" info="существительное в единственном числе">guildenstern</word>
-    <word id="9" info="прилагательное">dead</word>
-    <word id="10" info="глагол, причастие прошедшего времени">inspired</word>
-    <word id="12" info="глагол, герундий/причастие настоящего времени">interesting</word>
-    <word id="13" info="существительное в единственном числе">film</word>
-    <word id="16" info="прилагательное">full</word>
-    <word id="18" info="существительное в единственном числе">dry</word>
-    <word id="19" info="существительное в единственном числе">wit</word>
-    <word id="21" info="существительное в единственном числе">boundless</word>
-    <word id="22" info="прилагательное">understated</word>
-    <word id="23" info="существительное в единственном числе">humor</word>
-    <word id="28" info="существительное во множественном числе">plays</word>
-    <word id="30" info="наречие">similarly</word>
-    <word id="31" info="существительное в единственном числе">dry</word>
-    <word id="32" info="существительное в единственном числе">humor</word>
+    <word id="1" info="наречие">first</word>
+    <word id="2" info="существительное в единственном числе">intelligent</word>
+    <word id="3" info="существительное в единственном числе">step</word>
+    <word id="4" info="существительное в единственном числе">stoppard</word>
+    <word id="5" info="существительное в единственном числе">norman</word>
+    <word id="6" info="глагол, прошедшее время">took</word>
+    <word id="7" info="глагол, герундий/причастие настоящего времени">harmonizing</word>
+    <word id="8" info="существительное во множественном числе">events</word>
+    <word id="9" info="существительное в единственном числе">film</word>
+    <word id="10" info="существительное в единственном числе">romeo</word>
+    <word id="11" info="существительное в единственном числе">juliet</word>
   </sentence>
   <sentence id="24">
-    <word id="2" info="наречие">first</word>
-    <word id="3" info="существительное в единственном числе">intelligent</word>
-    <word id="4" info="существительное в единственном числе">step</word>
-    <word id="5" info="существительное в единственном числе">stoppard</word>
-    <word id="7" info="существительное в единственном числе">norman</word>
-    <word id="8" info="глагол, прошедшее время">took</word>
-    <word id="10" info="глагол, герундий/причастие настоящего времени">harmonizing</word>
-    <word id="12" info="существительное во множественном числе">events</word>
-    <word id="15" info="существительное в единственном числе">film</word>
-    <word id="17" info="существительное в единственном числе">romeo</word>
-    <word id="19" info="существительное в единственном числе">juliet</word>
+    <word id="1" info="цифра">one</word>
+    <word id="2" info="существительное в единственном числе">funniest</word>
+    <word id="3" info="существительное во множественном числе">scenes</word>
+    <word id="4" info="существительное в единственном числе">film</word>
+    <word id="5" info="существительное в единственном числе">imitation</word>
+    <word id="6" info="прилагательное">famous</word>
+    <word id="7" info="существительное в единственном числе">terrace</word>
+    <word id="8" info="существительное в единственном числе">scene</word>
+    <word id="9" info="существительное в единственном числе">play</word>
+    <word id="10" info="существительное в единственном числе">movie</word>
+    <word id="11" info="существительное в единственном числе">shakespeare</word>
+    <word id="12" info="существительное в единственном числе">bumbling</word>
+    <word id="13" info="существительное в единственном числе">viola</word>
+    <word id="14" info="глагол, герундий/причастие настоящего времени">trying</word>
+    <word id="15" info="существительное в единственном числе">fend</word>
+    <word id="16" info="существительное в единственном числе">nurse</word>
+    <word id="17" info="существительное в единственном числе">maid</word>
   </sentence>
   <sentence id="25">
-    <word id="1" info="цифра">one</word>
-    <word id="4" info="существительное в единственном числе">funniest</word>
-    <word id="5" info="существительное во множественном числе">scenes</word>
-    <word id="8" info="существительное в единственном числе">film</word>
-    <word id="11" info="существительное в единственном числе">imitation</word>
-    <word id="14" info="прилагательное">famous</word>
-    <word id="15" info="существительное в единственном числе">terrace</word>
-    <word id="16" info="существительное в единственном числе">scene</word>
-    <word id="19" info="существительное в единственном числе">play</word>
-    <word id="23" info="существительное в единственном числе">movie</word>
-    <word id="25" info="существительное в единственном числе">shakespeare</word>
-    <word id="27" info="существительное в единственном числе">bumbling</word>
-    <word id="30" info="существительное в единственном числе">viola</word>
-    <word id="32" info="глагол, герундий/причастие настоящего времени">trying</word>
-    <word id="34" info="существительное в единственном числе">fend</word>
-    <word id="37" info="существительное в единственном числе">nurse</word>
-    <word id="38" info="существительное в единственном числе">maid</word>
-  </sentence>
-  <sentence id="26">
     <word id="1" info="существительное в единственном числе">director</word>
     <word id="2" info="существительное в единственном числе">john</word>
     <word id="3" info="существительное в единственном числе">madden</word>
-    <word id="6" info="прилагательное">fantastic</word>
-    <word id="7" info="существительное в единственном числе">job</word>
-    <word id="8" info="глагол, герундий/причастие настоящего времени">dabbling</word>
-    <word id="10" info="существительное в единственном числе">slapstick</word>
-    <word id="11" info="существительное в единственном числе">humor</word>
-    <word id="13" info="существительное во множественном числе">scenes</word>
-    <word id="14" info="предлог/подчинительный союз">like</word>
-    <word id="16" info="модальный глагол">would</word>
-    <word id="18" info="глагол, прошедшее время">seemed</word>
-    <word id="19" info="существительное в единственном числе">obtuse</word>
-    <word id="22" info="существительное во множественном числе">hands</word>
-    <word id="25" info="существительное в единственном числе">lesser</word>
-    <word id="26" info="существительное в единственном числе">director</word>
+    <word id="4" info="прилагательное">fantastic</word>
+    <word id="5" info="существительное в единственном числе">job</word>
+    <word id="6" info="глагол, герундий/причастие настоящего времени">dabbling</word>
+    <word id="7" info="существительное в единственном числе">slapstick</word>
+    <word id="8" info="существительное в единственном числе">humor</word>
+    <word id="9" info="существительное во множественном числе">scenes</word>
+    <word id="10" info="предлог/подчинительный союз">like</word>
+    <word id="11" info="модальный глагол">would</word>
+    <word id="12" info="глагол, прошедшее время">seemed</word>
+    <word id="13" info="существительное в единственном числе">obtuse</word>
+    <word id="14" info="существительное во множественном числе">hands</word>
+    <word id="15" info="существительное в единственном числе">lesser</word>
+    <word id="16" info="существительное в единственном числе">director</word>
+  </sentence>
+  <sentence id="26">
+    <word id="1" info="глагол, петь. настоящее, не трехмерное действие">'m</word>
+    <word id="2" info="глагол, герундий/причастие настоящего времени">going</word>
+    <word id="3" info="глагол, базовая форма">see</word>
+    <word id="4" info="существительное в единственном числе">movie</word>
+    <word id="5" info="глагол, петь. настоящее, не трехмерное действие">'m</word>
+    <word id="6" info="прилагательное">certain</word>
+    <word id="7" info="прилагательное">numerous</word>
+    <word id="8" info="существительное во множественном числе">references</word>
+    <word id="9" info="глагол, причастие прошедшего времени">missed</word>
   </sentence>
   <sentence id="27">
-    <word id="2" info="глагол, петь. настоящее, не трехмерное действие">'m</word>
-    <word id="3" info="глагол, герундий/причастие настоящего времени">going</word>
-    <word id="7" info="глагол, базовая форма">see</word>
-    <word id="9" info="существительное в единственном числе">movie</word>
-    <word id="13" info="глагол, петь. настоящее, не трехмерное действие">'m</word>
-    <word id="14" info="прилагательное">certain</word>
-    <word id="17" info="прилагательное">numerous</word>
-    <word id="18" info="существительное во множественном числе">references</word>
-    <word id="21" info="глагол, причастие прошедшего времени">missed</word>
+    <word id="1" info="существительное в единственном числе">fact</word>
+    <word id="2" info="существительное в единственном числе">doubt</word>
+    <word id="3" info="притяжательное окончание">'s</word>
+    <word id="4" info="прилагательное">possible</word>
+    <word id="5" info="существительное в единственном числе">gather</word>
+    <word id="6" info="существительное в единственном числе">everything</word>
+    <word id="7" info="цифра">one</word>
+    <word id="8" info="глагол, герундий/причастие настоящего времени">viewing</word>
   </sentence>
   <sentence id="28">
-    <word id="2" info="существительное в единственном числе">fact</word>
-    <word id="5" info="существительное в единственном числе">doubt</word>
-    <word id="7" info="притяжательное окончание">'s</word>
-    <word id="8" info="прилагательное">possible</word>
-    <word id="10" info="существительное в единственном числе">gather</word>
-    <word id="11" info="существительное в единственном числе">everything</word>
-    <word id="14" info="цифра">one</word>
-    <word id="15" info="глагол, герундий/причастие настоящего времени">viewing</word>
+    <word id="1" info="существительное в единственном числе">stoppard</word>
+    <word id="2" info="существительное в единственном числе">master</word>
+    <word id="3" info="существительное в единственном числе">detail</word>
+    <word id="4" info="модальный глагол">'ll</word>
+    <word id="5" info="существительное в единственном числе">notice</word>
+    <word id="6" info="прилагательное">familiar</word>
+    <word id="7" info="существительное во множественном числе">lines</word>
+    <word id="8" info="глагол, причастие прошедшего времени">placed</word>
+    <word id="9" info="предлог/подчинительный союз">throughout</word>
+    <word id="10" info="существительное в единственном числе">film</word>
+    <word id="11" info="существительное во множественном числе">lines</word>
+    <word id="12" info="существительное в единственном числе">play</word>
+    <word id="13" info="существительное в единственном числе">dialogue</word>
+    <word id="14" info="глагол, герундий/причастие настоящего времени">suggesting</word>
+    <word id="15" info="существительное в единственном числе">shakespeare</word>
+    <word id="16" info="наречие">simply</word>
+    <word id="17" info="существительное в единственном числе">spoke</word>
+    <word id="18" info="предлог/подчинительный союз">like</word>
+    <word id="19" info="существительное в единственном числе">time</word>
   </sentence>
   <sentence id="29">
-    <word id="1" info="существительное в единственном числе">stoppard</word>
-    <word id="4" info="существительное в единственном числе">master</word>
-    <word id="6" info="существительное в единственном числе">detail</word>
-    <word id="9" info="модальный глагол">'ll</word>
-    <word id="10" info="существительное в единственном числе">notice</word>
-    <word id="11" info="прилагательное">familiar</word>
-    <word id="12" info="существительное во множественном числе">lines</word>
-    <word id="13" info="глагол, причастие прошедшего времени">placed</word>
-    <word id="14" info="предлог/подчинительный союз">throughout</word>
-    <word id="16" info="существительное в единственном числе">film</word>
-    <word id="20" info="существительное во множественном числе">lines</word>
-    <word id="23" info="существительное в единственном числе">play</word>
-    <word id="27" info="существительное в единственном числе">dialogue</word>
-    <word id="29" info="глагол, герундий/причастие настоящего времени">suggesting</word>
-    <word id="31" info="существительное в единственном числе">shakespeare</word>
-    <word id="32" info="наречие">simply</word>
-    <word id="33" info="существительное в единственном числе">spoke</word>
-    <word id="34" info="предлог/подчинительный союз">like</word>
-    <word id="38" info="существительное в единственном числе">time</word>
+    <word id="1" info="притяжательное окончание">'s</word>
+    <word id="2" info="наречие">also</word>
+    <word id="3" info="существительное в единственном числе">brilliant</word>
+    <word id="4" info="глагол, герундий/причастие настоящего времени">running</word>
+    <word id="5" info="существительное в единственном числе">joke</word>
+    <word id="6" info="существительное в единственном числе">shakespeare</word>
+    <word id="7" info="прилагательное">constant</word>
+    <word id="8" info="существительное в единственном числе">competition</word>
+    <word id="9" info="существительное в единственном числе">christopher</word>
+    <word id="10" info="существительное в единственном числе">marlowe</word>
+    <word id="11" info="существительное в единственном числе">fact</word>
+    <word id="12" info="существительное в единственном числе">marlowe</word>
+    <word id="13" info="существительное во множественном числе">played</word>
+    <word id="14" info="прилагательное">openly-homosexual</word>
+    <word id="15" info="существительное в единственном числе">rupert</word>
+    <word id="16" info="существительное в единственном числе">everett</word>
+    <word id="17" info="существительное в единственном числе">joke</word>
+    <word id="18" info="глагол, герундий/причастие настоящего времени">proposing</word>
+    <word id="19" info="наречие">slightly</word>
+    <word id="20" info="глагол, причастие прошедшего времени">twisted</word>
+    <word id="21" info="существительное в единственном числе">explanation</word>
+    <word id="22" info="существительное в единственном числе">marlowe</word>
+    <word id="23" info="притяжательное окончание">'s</word>
+    <word id="24" info="прилагательное">mysterious</word>
+    <word id="25" info="существительное в единственном числе">death</word>
+    <word id="26" info="существительное в единственном числе">pub</word>
   </sentence>
   <sentence id="30">
-    <word id="2" info="притяжательное окончание">'s</word>
-    <word id="3" info="наречие">also</word>
-    <word id="5" info="существительное в единственном числе">brilliant</word>
-    <word id="6" info="глагол, герундий/причастие настоящего времени">running</word>
-    <word id="7" info="существительное в единственном числе">joke</word>
-    <word id="10" info="существительное в единственном числе">shakespeare</word>
-    <word id="13" info="прилагательное">constant</word>
-    <word id="14" info="существительное в единственном числе">competition</word>
-    <word id="16" info="существительное в единственном числе">christopher</word>
-    <word id="17" info="существительное в единственном числе">marlowe</word>
-    <word id="21" info="существительное в единственном числе">fact</word>
-    <word id="23" info="существительное в единственном числе">marlowe</word>
-    <word id="25" info="существительное во множественном числе">played</word>
-    <word id="28" info="прилагательное">openly-homosexual</word>
-    <word id="29" info="существительное в единственном числе">rupert</word>
-    <word id="30" info="существительное в единственном числе">everett</word>
-    <word id="33" info="существительное в единственном числе">joke</word>
-    <word id="39" info="глагол, герундий/причастие настоящего времени">proposing</word>
-    <word id="41" info="наречие">slightly</word>
-    <word id="42" info="глагол, причастие прошедшего времени">twisted</word>
-    <word id="43" info="существительное в единственном числе">explanation</word>
-    <word id="45" info="существительное в единственном числе">marlowe</word>
-    <word id="46" info="притяжательное окончание">'s</word>
-    <word id="47" info="прилагательное">mysterious</word>
-    <word id="48" info="существительное в единственном числе">death</word>
-    <word id="51" info="существительное в единственном числе">pub</word>
+    <word id="1" info="притяжательное окончание">'s</word>
+    <word id="2" info="наречие">also</word>
+    <word id="3" info="существительное в единственном числе">scene</word>
+    <word id="4" info="глагол, герундий/причастие настоящего времени">featuring</word>
+    <word id="5" info="прилагательное">wide-eyed</word>
+    <word id="6" info="существительное в единственном числе">dog</word>
+    <word id="7" info="существительное в единственном числе">funny</word>
+    <word id="8" info="существительное в единственном числе">hurt</word>
+    <word id="9" info="глагол, герундий/причастие настоящего времени">laughing</word>
   </sentence>
   <sentence id="31">
-    <word id="2" info="притяжательное окончание">'s</word>
-    <word id="3" info="наречие">also</word>
-    <word id="5" info="существительное в единственном числе">scene</word>
-    <word id="6" info="глагол, герундий/причастие настоящего времени">featuring</word>
-    <word id="8" info="прилагательное">wide-eyed</word>
-    <word id="9" info="существительное в единственном числе">dog</word>
-    <word id="13" info="существительное в единственном числе">funny</word>
-    <word id="16" info="существительное в единственном числе">hurt</word>
-    <word id="18" info="глагол, герундий/причастие настоящего времени">laughing</word>
+    <word id="1" info="притяжательное окончание">'s</word>
+    <word id="2" info="существительное в единственном числе">dog</word>
+    <word id="3" info="существительное в единственном числе">play</word>
   </sentence>
   <sentence id="32">
-    <word id="2" info="притяжательное окончание">'s</word>
-    <word id="4" info="существительное в единственном числе">dog</word>
-    <word id="7" info="существительное в единственном числе">play</word>
+    <word id="1" info="существительное в единственном числе">dog</word>
   </sentence>
-  <sentence id="33"/>
+  <sentence id="33">
+    <word id="1" info="прилагательное">ensemble</word>
+    <word id="2" info="существительное в единственном числе">cast</word>
+    <word id="3" info="наречие">perhaps</word>
+    <word id="4" info="прилагательное в превосходной ">strongest</word>
+    <word id="5" info="существительное в единственном числе">year</word>
+  </sentence>
   <sentence id="34">
-    <word id="2" info="существительное в единственном числе">dog</word>
-  </sentence>
-  <sentence id="35">
-    <word id="2" info="прилагательное">ensemble</word>
-    <word id="3" info="существительное в единственном числе">cast</word>
-    <word id="5" info="наречие">perhaps</word>
-    <word id="7" info="прилагательное в превосходной ">strongest</word>
-    <word id="9" info="существительное в единственном числе">year</word>
-  </sentence>
-  <sentence id="36">
     <word id="1" info="существительное в единственном числе">geoffrey</word>
     <word id="2" info="существительное в единственном числе">rush</word>
-    <word id="4" info="наречие">nearly</word>
-    <word id="5" info="прилагательное">unrecognizable</word>
-    <word id="8" info="прилагательное">detestable</word>
-    <word id="9" info="существительное в единственном числе">henslowe</word>
-    <word id="11" info="существительное в единственном числе">wilkinson</word>
-    <word id="13" info="наречие">also</word>
-    <word id="14" info="прилагательное">hard</word>
-    <word id="16" info="глагол, базовая форма">recognize</word>
-    <word id="21" info="прилагательное">great</word>
-    <word id="22" info="существительное в единственном числе">role</word>
-    <word id="25" info="существительное в единственном числе">thug</word>
-    <word id="27" info="глагол, поющий в 3-м лице. настоящее принимает">takes</word>
-    <word id="29" info="существительное в единственном числе">part</word>
-    <word id="32" info="прилагательное">apothecary</word>
-    <word id="34" info="наречие">seriously</word>
+    <word id="3" info="наречие">nearly</word>
+    <word id="4" info="прилагательное">unrecognizable</word>
+    <word id="5" info="прилагательное">detestable</word>
+    <word id="6" info="существительное в единственном числе">henslowe</word>
+    <word id="7" info="существительное в единственном числе">wilkinson</word>
+    <word id="8" info="наречие">also</word>
+    <word id="9" info="прилагательное">hard</word>
+    <word id="10" info="глагол, базовая форма">recognize</word>
+    <word id="11" info="прилагательное">great</word>
+    <word id="12" info="существительное в единственном числе">role</word>
+    <word id="13" info="существительное в единственном числе">thug</word>
+    <word id="14" info="глагол, поющий в 3-м лице. настоящее принимает">takes</word>
+    <word id="15" info="существительное в единственном числе">part</word>
+    <word id="16" info="прилагательное">apothecary</word>
+    <word id="17" info="наречие">seriously</word>
   </sentence>
-  <sentence id="37">
+  <sentence id="35">
     <word id="1" info="существительное в единственном числе">ben</word>
     <word id="2" info="существительное в единственном числе">affleck</word>
-    <word id="4" info="глагол, герундий/причастие настоящего времени">playing</word>
-    <word id="5" info="цифра">one</word>
-    <word id="8" info="существительное во множественном числе">actors</word>
-    <word id="11" info="существительное в единственном числе">company</word>
-    <word id="13" info="существительное во множественном числе">shows</word>
-    <word id="14" info="прилагательное">great</word>
-    <word id="15" info="существительное в единственном числе">range</word>
-    <word id="20" info="существительное в единственном числе">accent</word>
-    <word id="24" info="наречие">almost</word>
-    <word id="26" info="прилагательное">good</word>
-    <word id="28" info="существительное в единственном числе">paltrow</word>
-    <word id="29" info="притяжательное окончание">'s</word>
-    <word id="33" info="существительное в единственном числе">humor</word>
-    <word id="40" info="прилагательное в превосходной ">best</word>
-    <word id="41" info="существительное во множественном числе">one-liners</word>
-    <word id="44" info="существительное в единственном числе">movie</word>
+    <word id="3" info="глагол, герундий/причастие настоящего времени">playing</word>
+    <word id="4" info="цифра">one</word>
+    <word id="5" info="существительное во множественном числе">actors</word>
+    <word id="6" info="существительное в единственном числе">company</word>
+    <word id="7" info="существительное во множественном числе">shows</word>
+    <word id="8" info="прилагательное">great</word>
+    <word id="9" info="существительное в единственном числе">range</word>
+    <word id="10" info="существительное в единственном числе">accent</word>
+    <word id="11" info="наречие">almost</word>
+    <word id="12" info="прилагательное">good</word>
+    <word id="13" info="существительное в единственном числе">paltrow</word>
+    <word id="14" info="притяжательное окончание">'s</word>
+    <word id="15" info="существительное в единственном числе">humor</word>
+    <word id="16" info="прилагательное в превосходной ">best</word>
+    <word id="17" info="существительное во множественном числе">one-liners</word>
+    <word id="18" info="существительное в единственном числе">movie</word>
   </sentence>
-  <sentence id="38">
+  <sentence id="36">
     <word id="1" info="существительное в единственном числе">colin</word>
     <word id="2" info="существительное в единственном числе">firth</word>
-    <word id="4" info="наречие">always</word>
-    <word id="5" info="существительное в единственном числе">stuck</word>
-    <word id="6" info="глагол, герундий/причастие настоящего времени">playing</word>
-    <word id="8" info="существительное в единственном числе">sap</word>
-    <word id="12" info="прилагательное">good</word>
-    <word id="13" info="существительное в единственном числе">job</word>
-    <word id="15" info="существительное в единственном числе">hateful</word>
+    <word id="3" info="наречие">always</word>
+    <word id="4" info="существительное в единственном числе">stuck</word>
+    <word id="5" info="глагол, герундий/причастие настоящего времени">playing</word>
+    <word id="6" info="существительное в единственном числе">sap</word>
+    <word id="7" info="прилагательное">good</word>
+    <word id="8" info="существительное в единственном числе">job</word>
+    <word id="9" info="существительное в единственном числе">hateful</word>
   </sentence>
-  <sentence id="39">
+  <sentence id="37">
     <word id="1" info="существительное в единственном числе">judi</word>
     <word id="2" info="существительное в единственном числе">dench</word>
-    <word id="4" info="наречие">however</word>
-    <word id="8" info="прилагательное в превосходной ">best</word>
-    <word id="9" info="глагол, герундий/причастие настоящего времени">supporting</word>
-    <word id="10" info="существительное в единственном числе">performance</word>
-    <word id="12" info="существительное в единственном числе">queen</word>
-    <word id="13" info="существительное во множественном числе">elizabeth</word>
-    <word id="15" info="наречие">rarely</word>
-    <word id="18" info="прилагательное">much</word>
-    <word id="19" info="существительное в единственном числе">depth</word>
-    <word id="21" info="существительное в единственном числе">conveyed</word>
-    <word id="25" info="существительное во множественном числе">words</word>
+    <word id="3" info="наречие">however</word>
+    <word id="4" info="прилагательное в превосходной ">best</word>
+    <word id="5" info="глагол, герундий/причастие настоящего времени">supporting</word>
+    <word id="6" info="существительное в единственном числе">performance</word>
+    <word id="7" info="существительное в единственном числе">queen</word>
+    <word id="8" info="существительное во множественном числе">elizabeth</word>
+    <word id="9" info="наречие">rarely</word>
+    <word id="10" info="прилагательное">much</word>
+    <word id="11" info="существительное в единственном числе">depth</word>
+    <word id="12" info="существительное в единственном числе">conveyed</word>
+    <word id="13" info="существительное во множественном числе">words</word>
+  </sentence>
+  <sentence id="38">
+    <word id="1" info="прилагательное">single</word>
+    <word id="2" info="существительное в единственном числе">minor</word>
+    <word id="3" info="существительное в единственном числе">complaint</word>
+    <word id="4" info="существительное в единственном числе">shakespeare</word>
+    <word id="5" info="существительное в единственном числе">love</word>
+    <word id="6" info="существительное в единственном числе">feel</word>
+    <word id="7" info="предлог/подчинительный союз">like</word>
+    <word id="8" info="модальный глагол">could</word>
+    <word id="9" info="глагол, причастие прошедшего времени">moved</word>
+    <word id="10" info="существительное в единственном числе">end</word>
+  </sentence>
+  <sentence id="39">
+    <word id="1" info="существительное в единственном числе">story</word>
+    <word id="2" info="глагол, герундий/причастие настоящего времени">moving</word>
+    <word id="3" info="глагол, причастие прошедшего времени">missed</word>
+    <word id="4" info="существительное во множественном числе">opportunities</word>
+    <word id="5" info="прилагательное">final</word>
+    <word id="6" info="существительное во множественном числе">scenes</word>
   </sentence>
   <sentence id="40">
-    <word id="2" info="прилагательное">single</word>
-    <word id="4" info="существительное в единственном числе">minor</word>
-    <word id="5" info="существительное в единственном числе">complaint</word>
-    <word id="7" info="существительное в единственном числе">shakespeare</word>
-    <word id="9" info="существительное в единственном числе">love</word>
-    <word id="13" info="существительное в единственном числе">feel</word>
-    <word id="14" info="предлог/подчинительный союз">like</word>
-    <word id="16" info="модальный глагол">could</word>
-    <word id="20" info="глагол, причастие прошедшего времени">moved</word>
-    <word id="23" info="существительное в единственном числе">end</word>
+    <word id="1" info="глагол, герундий/причастие настоящего времени">quibbling</word>
+    <word id="2" info="прилагательное">important</word>
   </sentence>
   <sentence id="41">
-    <word id="2" info="существительное в единственном числе">story</word>
-    <word id="4" info="глагол, герундий/причастие настоящего времени">moving</word>
-    <word id="11" info="глагол, причастие прошедшего времени">missed</word>
-    <word id="12" info="существительное во множественном числе">opportunities</word>
-    <word id="15" info="прилагательное">final</word>
-    <word id="16" info="существительное во множественном числе">scenes</word>
+    <word id="1" info="прилагательное">important</word>
+    <word id="2" info="существительное в единственном числе">acknowledge</word>
+    <word id="3" info="существительное в единственном числе">quality</word>
+    <word id="4" info="существительное в единственном числе">picture</word>
+    <word id="5" info="существительное в единственном числе">sheer</word>
+    <word id="6" info="существительное в единственном числе">skill</word>
+    <word id="7" info="глагол, причастие прошедшего времени">written</word>
+    <word id="8" info="глагол, причастие прошедшего времени">acted</word>
+    <word id="9" info="глагол, причастие прошедшего времени">produced</word>
   </sentence>
   <sentence id="42">
-    <word id="3" info="глагол, герундий/причастие настоящего времени">quibbling</word>
-    <word id="6" info="прилагательное">important</word>
+    <word id="1" info="существительное в единственном числе">shakespeare</word>
+    <word id="2" info="существительное в единственном числе">love</word>
+    <word id="3" info="существительное во множественном числе">tries</word>
+    <word id="4" info="прилагательное">many</word>
+    <word id="5" info="существительное во множественном числе">things</word>
+    <word id="6" info="существительное во множественном числе">nails</word>
+    <word id="7" info="определитель">every</word>
+    <word id="8" info="цифра">one</word>
+    <word id="9" info="притяжательное окончание">'s</word>
+    <word id="10" info="существительное в единственном числе">film</word>
+    <word id="11" info="существительное во множественном числе">loves</word>
+    <word id="12" info="существительное в единственном числе">shakespeare</word>
+    <word id="13" info="глагол, поющий в 3-м лице. настоящее принимает">makes</word>
+    <word id="14" info="существительное в единственном числе">fun</word>
+    <word id="15" info="существительное в единственном числе">film</word>
+    <word id="16" info="существительное во множественном числе">actors</word>
+    <word id="17" info="существительное во множественном числе">writers</word>
+    <word id="18" info="существительное в единственном числе">director</word>
+    <word id="19" info="наречие">perfectly</word>
+    <word id="20" info="существительное в единственном числе">sync</word>
   </sentence>
   <sentence id="43">
-    <word id="3" info="прилагательное">important</word>
-    <word id="7" info="существительное в единственном числе">acknowledge</word>
-    <word id="9" info="существительное в единственном числе">quality</word>
-    <word id="12" info="существительное в единственном числе">picture</word>
-    <word id="15" info="существительное в единственном числе">sheer</word>
-    <word id="16" info="существительное в единственном числе">skill</word>
-    <word id="22" info="глагол, причастие прошедшего времени">written</word>
-    <word id="24" info="глагол, причастие прошедшего времени">acted</word>
-    <word id="27" info="глагол, причастие прошедшего времени">produced</word>
+    <word id="1" info="притяжательное окончание">'s</word>
+    <word id="2" info="наречие">also</word>
+    <word id="3" info="существительное в единственном числе">movie</word>
+    <word id="4" info="прилагательное">potential</word>
+    <word id="5" info="существительное в единственном числе">introduce</word>
+    <word id="6" info="существительное в единственном числе">lot</word>
+    <word id="7" info="существительное во множественном числе">people</word>
+    <word id="8" info="существительное в единственном числе">shakespeare</word>
+    <word id="9" info="притяжательное окончание">'s</word>
+    <word id="10" info="существительное в единственном числе">work</word>
+    <word id="11" info="прилагательное">positive</word>
+    <word id="12" info="существительное в единственном числе">way</word>
+    <word id="13" info="предлог/подчинительный союз">without</word>
+    <word id="14" info="глагол, герундий/причастие настоящего времени">seeming</word>
+    <word id="15" info="глагол, герундий/причастие настоящего времени">condescending</word>
+    <word id="16" info="прилагательное">superior</word>
   </sentence>
   <sentence id="44">
-    <word id="1" info="существительное в единственном числе">shakespeare</word>
-    <word id="3" info="существительное в единственном числе">love</word>
-    <word id="4" info="существительное во множественном числе">tries</word>
-    <word id="6" info="прилагательное">many</word>
-    <word id="7" info="существительное во множественном числе">things</word>
-    <word id="10" info="существительное во множественном числе">nails</word>
-    <word id="11" info="определитель">every</word>
-    <word id="12" info="цифра">one</word>
-    <word id="17" info="притяжательное окончание">'s</word>
-    <word id="19" info="существительное в единственном числе">film</word>
-    <word id="22" info="существительное во множественном числе">loves</word>
-    <word id="23" info="существительное в единственном числе">shakespeare</word>
-    <word id="25" info="глагол, поющий в 3-м лице. настоящее принимает">makes</word>
-    <word id="26" info="существительное в единственном числе">fun</word>
-    <word id="31" info="существительное в единственном числе">film</word>
-    <word id="35" info="существительное во множественном числе">actors</word>
-    <word id="37" info="существительное во множественном числе">writers</word>
-    <word id="40" info="существительное в единственном числе">director</word>
-    <word id="43" info="наречие">perfectly</word>
-    <word id="45" info="существительное в единственном числе">sync</word>
+    <word id="1" info="существительное в единственном числе">admire</word>
+    <word id="2" info="существительное в единственном числе">film</word>
+    <word id="3" info="существительное во множественном числе">passes</word>
+    <word id="4" info="наречие">pleasantly</word>
+    <word id="5" info="существительное в единственном числе">lofty</word>
+    <word id="6" info="существительное во множественном числе">aspirations</word>
+    <word id="7" info="глагол, поющий в 3-м лице. настоящее принимает">succeeds</word>
   </sentence>
   <sentence id="45">
-    <word id="2" info="притяжательное окончание">'s</word>
-    <word id="3" info="наречие">also</word>
-    <word id="5" info="существительное в единственном числе">movie</word>
-    <word id="9" info="прилагательное">potential</word>
-    <word id="11" info="существительное в единственном числе">introduce</word>
-    <word id="13" info="существительное в единственном числе">lot</word>
-    <word id="15" info="существительное во множественном числе">people</word>
-    <word id="17" info="существительное в единственном числе">shakespeare</word>
-    <word id="18" info="притяжательное окончание">'s</word>
-    <word id="19" info="существительное в единственном числе">work</word>
-    <word id="22" info="прилагательное">positive</word>
-    <word id="23" info="существительное в единственном числе">way</word>
-    <word id="25" info="предлог/подчинительный союз">without</word>
-    <word id="26" info="глагол, герундий/причастие настоящего времени">seeming</word>
-    <word id="27" info="глагол, герундий/причастие настоящего времени">condescending</word>
-    <word id="29" info="прилагательное">superior</word>
-  </sentence>
-  <sentence id="46">
-    <word id="2" info="существительное в единственном числе">admire</word>
-    <word id="4" info="существительное в единственном числе">film</word>
-    <word id="9" info="существительное во множественном числе">passes</word>
-    <word id="11" info="наречие">pleasantly</word>
-    <word id="17" info="существительное в единственном числе">lofty</word>
-    <word id="18" info="существительное во множественном числе">aspirations</word>
-    <word id="20" info="глагол, поющий в 3-м лице. настоящее принимает">succeeds</word>
-  </sentence>
-  <sentence id="47">
-    <word id="4" info="существительное в единственном числе">film</word>
-    <word id="6" info="существительное в единственном числе">poke</word>
-    <word id="7" info="существительное в единственном числе">fun</word>
-    <word id="9" info="существительное в единственном числе">shakespeare</word>
-    <word id="11" info="глагол, базовая форма">get</word>
-    <word id="12" info="наречие">away</word>
+    <word id="1" info="существительное в единственном числе">film</word>
+    <word id="2" info="существительное в единственном числе">poke</word>
+    <word id="3" info="существительное в единственном числе">fun</word>
+    <word id="4" info="существительное в единственном числе">shakespeare</word>
+    <word id="5" info="глагол, базовая форма">get</word>
+    <word id="6" info="наречие">away</word>
   </sentence>
 </cv728_16133.txt>
