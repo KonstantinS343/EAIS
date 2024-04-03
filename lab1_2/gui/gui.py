@@ -404,7 +404,7 @@ class Ui_MainWindow(object):
             self.contex.clicked.connect(lambda: self.contex_button_clicked(MainWindow))
         self.search_line_edit.textChanged.connect(self._search_line_text_changed)
         self.search_button.clicked.connect(self._search_button_clicked)
-        self.save_anal.clicked.connect(self._save_anal_button_clicked)
+        self.save_anal.clicked.connect(lambda: self._save_anal_button_clicked(MainWindow))
         self.part_line_edit.textChanged.connect(self._part_line_text_changed)
         self.min_frequency_spinbox.valueChanged.connect(
             self._min_freq_spinbox_value_changed
@@ -661,7 +661,7 @@ class Ui_MainWindow(object):
                     key, value["frequency"], metadata[nltk.pos_tag([key])[0][1]]
                 )
 
-    def _save_anal_button_clicked(self):
+    def _save_anal_button_clicked(self, MainWindow):
         filename, ok = QtWidgets.QFileDialog.getSaveFileName(
             MainWindow, "сохранить разбор как...", os.path.curdir, "Text files(*.json)"
         )

@@ -44,6 +44,7 @@ def main_analysis(text: str):
         V: {<V.*>}
         PP: {<P> <NP>}
         VP: {<V> <NP|PP>*}
+        S:   {<NP> <VP>}
         """
     )
 
