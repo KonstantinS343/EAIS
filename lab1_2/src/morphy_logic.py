@@ -42,11 +42,12 @@ def filter_rows(
         ),
         "extra information": filter(
             lambda x: search_type is not None
-            and search_type is str
+            and isinstance(search_type, str)
             and search_type in x[1]["additional information"],
             data.items(),
         ),
     }
+
     return dict(filters[flag])
 
 

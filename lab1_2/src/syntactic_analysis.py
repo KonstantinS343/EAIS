@@ -3,6 +3,7 @@ from nltk.tokenize import sent_tokenize
 from nltk.draw.util import CanvasFrame
 from nltk.draw import TreeWidget
 
+import json
 import string
 from typing import Optional, List
 
@@ -22,21 +23,6 @@ def split_sentence(text: str) -> List[str]:
 
 
 def main_analysis(text: str):
-    #  grammer = RegexpParser(
-    #      """
-    #      P:   {<IN>}
-    #      N:   {<NN.*>}
-    #      DET: {<DT>}
-    #      NP:  {<DET><N><PP>?}
-    #           {<NNP>}
-    #      V:   {<VB.*>}
-    #      PP:  {<P><NP>}
-    #      VP:  {<V><NP>}
-    #           {<V><NP><PP>}
-    #      S:   {<NP><VP>}
-    #      """
-    #  )
-
     grammer = RegexpParser(
         """
         NP: {<DT>?<JJ>*<NN.*>}
@@ -51,13 +37,20 @@ def main_analysis(text: str):
     tagged = pos_tag(
         [word for word in word_tokenize(text) if word not in string.punctuation]
     )
-    #  for i in range(len(tagged)):
-    #      tagged[i] = (tagged[i][0], metadata[tagged[i][1]])
     window = CanvasFrame(width=1500, height=500)
     output = grammer.parse(tagged)
     tree = TreeWidget(window.canvas(), output)
     window.add_widget(tree, 10, 10)
     window.mainloop()
+    with open('trees.json', 'a') as f:
+        json.dump({text: output}, f, indent=4)
+
+
+
+
+
+
+
 
 #  """
 #  NP: {<DT>?<JJ>*<NN>}
@@ -74,3 +67,5 @@ def main_analysis(text: str):
 #  Предлог и существительное: {<Предлог> <Группа существительных>}
 #  Глагольная группа: {<Глагол> <Группа существительных|Предлог и существительное>*}
 #  """
+#  for i in range(len(tagged)):
+#      tagged[i] = (tagged[i][0], metadata[tagged[i][1]])
