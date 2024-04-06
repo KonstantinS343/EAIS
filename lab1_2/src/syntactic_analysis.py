@@ -7,8 +7,6 @@ import json
 import string
 from typing import Optional, List
 
-#  from conf.metadata import metadata
-
 
 def filter_syntactic_rows(
     data: List[str],
@@ -30,7 +28,7 @@ def main_analysis(text: str):
         V: {<V.*>}
         PP: {<P> <NP>}
         VP: {<V> <NP|PP>*}
-        S:   {<NP> <VP>}
+        S:  {<NP> <VP>}
         """
     )
 
@@ -44,28 +42,3 @@ def main_analysis(text: str):
     window.mainloop()
     with open('trees.json', 'a') as f:
         json.dump({text: output}, f, indent=4)
-
-
-
-
-
-
-
-
-#  """
-#  NP: {<DT>?<JJ>*<NN>}
-#  P: {<IN>}
-#  V: {<V.*>}
-#  PP: {<P> <NP>}
-#  VP: {<V> <NP|PP>*}
-#  """
-
-#  """
-#  Группа существительных: {<артикль>?<прилагательное.*>*<существительное.*>|<имя.*>}
-#  Предлог: {<предлог/подчинительный союз>}
-#  Глагол: {<глагол.*>}
-#  Предлог и существительное: {<Предлог> <Группа существительных>}
-#  Глагольная группа: {<Глагол> <Группа существительных|Предлог и существительное>*}
-#  """
-#  for i in range(len(tagged)):
-#      tagged[i] = (tagged[i][0], metadata[tagged[i][1]])

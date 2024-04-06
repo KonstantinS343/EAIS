@@ -19,8 +19,10 @@ import time
 from src.morphy_logic import filter_rows, morphy_logic_main
 from src.text_corpora import main_corpus
 from src.syntactic_analysis import main_analysis, filter_syntactic_rows, split_sentence
+from src.semantic_analysis import semantic_anallysis
 from conf.metadata import metadata
 from gui.dialog import Ui_Dialog
+from gui.text_dialog import Ui_Dialog_Text_Area
 
 
 logging.basicConfig(
@@ -135,7 +137,8 @@ class Ui_MainWindow(object):
         self.result_table.setEditTriggers(
             QtWidgets.QTableWidget.EditTrigger.NoEditTriggers
         )
-        self.result_table.cellDoubleClicked.connect(self.on_cell_double_click)
+        self.result_table.cellDoubleClicked.connect(lambda row, column: self.on_cell_double_click(row, column,
+                                                                                                  MainWindow=MainWindow))
 
         self.gridLayout.addWidget(self.result_table, 5, 2, 1, 4)
 
@@ -336,7 +339,7 @@ class Ui_MainWindow(object):
         self.part_line_edit.setPlaceholderText(
             _translate("MainWindow", "Введите название части речи...")
         )
-        if self.mode != '3':
+        if self.mode != '3' and self.mode != '4':
             self.menu.setTitle(_translate("MainWindow", "Фильтрация и поиск"))
         self.lexem_filtration_action.setText(
             _translate("MainWindow", "Поиск по словам")
@@ -387,10 +390,18 @@ class Ui_MainWindow(object):
         if not self.save_anal.isEnabled():
             self.save_anal.setEnabled(True)
 
-    def on_cell_double_click(self, row, column):
+    def on_cell_double_click(self, row, column, MainWindow):
         item = self.result_table.item(row, column)
         sentence = item.text()
-        main_analysis(sentence)
+        if self.mode == '3':
+            main_analysis(sentence)
+        else:
+            Dialog = QtWidgets.QDialog(parent=MainWindow)
+            ui = Ui_Dialog_Text_Area()
+            text = semantic_anallysis(sentence)
+            ui.setupUi(Dialog)
+            ui.fill(text=text)
+            Dialog.show()
 
     def _connect_all(self, MainWindow):
         self.text_area.textChanged.connect(self._text_area_edited)
@@ -631,7 +642,7 @@ class Ui_MainWindow(object):
         flag = "word"
         if self.lexem_filtration_action.isChecked():
             word_to_search = self.search_line_edit.text().strip(" ")
-            if self.mode == '3':
+            if self.mode == '3' and self.mode == '4':
                 words = filter_syntactic_rows(search_type=word_to_search, data=self.result)
             else:
                 words = filter_rows(flag=flag, search_type=word_to_search, data=self.result)
@@ -652,7 +663,7 @@ class Ui_MainWindow(object):
             )
             # Часть речи, по которому поиск будет
         self._clear_result_table()
-        if self.mode == '3':
+        if self.mode == '3' and self.mode == '4':
             for sentence in words:
                 self.emplace_word2(sentence)
         else:

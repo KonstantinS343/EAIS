@@ -10,10 +10,10 @@ if __name__ == '__main__':
         print('Аргументы!!!')
         exit()
     mode = sys.argv[1]
-    if sys.argv[1] not in ('1', '2', '3'):
+    if sys.argv[1] not in ('1', '2', '3', '4'):
         exit()
 
-    if sys.argv[1] == '3':
+    if sys.argv[1] in ('3', '4'):
         column = 1
     else:
         column = 3
