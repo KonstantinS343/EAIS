@@ -3,7 +3,7 @@ from nltk.corpus.reader.wordnet import Synset
 from nltk import word_tokenize
 
 import string
-from typing import List, Tuple
+from typing import List, Tuple, Dict
 import logging
 import time
 import json
@@ -24,7 +24,9 @@ def try_get_obj_by_name(word: str, words: List[Synset]) -> Synset:
     return words[0]
 
 
-def get_synonyms_antonyms(word: str, words: List[Synset]) -> Tuple[List[str], List[str]]:
+def get_synonyms_antonyms(
+    word: str, words: List[Synset]
+) -> Tuple[List[str], List[str]]:
     synonyms = set()
     antonyms = set()
 
@@ -44,11 +46,35 @@ def get_hyponyms_hypernyms(words: List[Synset]) -> Tuple[List[str], List[str]]:
 
     for item in words:
         for i in item.hyponyms():
-            hyponyms.add(i.name().split('.')[0])
+            hyponyms.add(i.name().split(".")[0])
         for i in item.hypernyms():
-            hypernyms.add(i.name().split('.')[0])
+            hypernyms.add(i.name().split(".")[0])
 
     return list(hyponyms), list(hypernyms)
+
+
+def get_semantic_analysis_in_str(
+    sentence: str, semantic_analysis: Dict[str, Dict[str, str | List[str]]]
+) -> str:
+    output = "<html>"
+    for word, description in semantic_analysis.items():
+        output += (
+                "= " * ((40 - len(word.capitalize())) // 2)
+                + f"<b>{word.capitalize()}</b>"
+                + " =" * ((40 - len(word.capitalize())) // 2)
+                + "<br>"
+        )
+        for arg, value in description.items():
+            if isinstance(value, str):
+                output += f"<b>{arg}:</b> " + f"{value}<br>"
+            elif isinstance(value, list):
+                output += (
+                    f"<b>{arg}:</b> "
+                    + f"{str(value).replace('[', '').replace(']', '')}<br>"
+                )
+        output += "= " * 40 + "<br><br></html>"
+
+    return output
 
 
 def semantic_anallysis(text: str) -> str:
@@ -57,7 +83,7 @@ def semantic_anallysis(text: str) -> str:
         for word in word_tokenize(text)
         if word not in string.punctuation and word not in string.digits
     ]
-    output = "<html>"
+
     output_in_dict = {}
     start = time.time()
 
@@ -71,29 +97,17 @@ def semantic_anallysis(text: str) -> str:
         synonyms, antonyms = get_synonyms_antonyms(word=word, words=cursor)
         hyponyms, hypernyms = get_hyponyms_hypernyms(words=cursor)
 
-        output += (
-            "= " * ((40 - len(word.capitalize())) // 2)
-            + f'<b>{word.capitalize()}</b>'
-            + " =" * ((40 - len(word.capitalize())) // 2)
-            + "<br>"
-        )
-        output += f"<b>{word.capitalize()}</b> - " + f"{defenition}<br>"
-        output += "<b>Examples:</b> " + f"{str(example).replace('[', '').replace(']', '')}<br>"
-        output += "<b>Synonyms:</b> " + f"{str(synonyms).replace('[', '').replace(']', '')}<br>"
-        output += "<b>Antonyms:</b> " + f"{str(antonyms).replace('[', '').replace(']', '')}<br>"
-        output += "<b>Hyponyms:</b> " + f"{str(hyponyms).replace('[', '').replace(']', '')}<br>"
-        output += "<b>Hypernyms:</b> " + f"{str(hypernyms).replace('[', '').replace(']', '')}<br>"
-        output += "= " * 40 + "<br><br></html>"
-
         output_in_dict[word.capitalize()] = {
             "Defenition": defenition,
             "Example": example,
             "Synonyms": synonyms,
             "Antonyms": antonyms,
             "Hyponyms": hyponyms,
-            "Hypernyms": hypernyms
+            "Hypernyms": hypernyms,
         }
-
+    output = get_semantic_analysis_in_str(
+        sentence=text, semantic_analysis=output_in_dict
+    )
     with open("semantic.json", "a+") as file:
         file.seek(0)
 
@@ -111,4 +125,3 @@ def semantic_anallysis(text: str) -> str:
 
     logging.info(time.time() - start)
     return output
-

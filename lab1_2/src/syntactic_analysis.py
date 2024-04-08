@@ -40,5 +40,5 @@ def main_analysis(text: str):
     tree = TreeWidget(window.canvas(), output)
     window.add_widget(tree, 10, 10)
     window.mainloop()
-    with open('trees.json', 'a') as f:
+    with open("trees.json", "a") as f:
         json.dump({text: output}, f, indent=4)

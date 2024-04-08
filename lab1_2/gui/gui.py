@@ -137,8 +137,11 @@ class Ui_MainWindow(object):
         self.result_table.setEditTriggers(
             QtWidgets.QTableWidget.EditTrigger.NoEditTriggers
         )
-        self.result_table.cellDoubleClicked.connect(lambda row, column: self.on_cell_double_click(row, column,
-                                                                                                  MainWindow=MainWindow))
+        self.result_table.cellDoubleClicked.connect(
+            lambda row, column: self.on_cell_double_click(
+                row, column, MainWindow=MainWindow
+            )
+        )
 
         self.gridLayout.addWidget(self.result_table, 5, 2, 1, 4)
 
@@ -154,10 +157,11 @@ class Ui_MainWindow(object):
         self.help_button.setCheckable(True)
         self.gridLayout.addWidget(self.help_button, 0, 0, 1, 1)
 
-        if self.mode == '2':
+        if self.mode == "2":
             self.contex = QtWidgets.QPushButton(self.centralwidget)
             self.contex.setSizePolicy(
-                QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Fixed
+                QtWidgets.QSizePolicy.Policy.Preferred,
+                QtWidgets.QSizePolicy.Policy.Fixed,
             )
             self.contex.setObjectName("contex")
             self.gridLayout.addWidget(self.contex, 0, 1, 1, 1)
@@ -279,7 +283,7 @@ class Ui_MainWindow(object):
         self.save_anal.setText(_translate("MainWindow", "Сохранить разбор"))
         self.help_button.setToolTip(_translate("MainWindow", "Открыть систему помощи"))
         self.help_button.setText(_translate("MainWindow", "Помощь"))
-        if self.mode == '2':
+        if self.mode == "2":
             self.contex.setToolTip(
                 _translate("MainWindow", "Поиск контекста использования слова")
             )
@@ -339,7 +343,7 @@ class Ui_MainWindow(object):
         self.part_line_edit.setPlaceholderText(
             _translate("MainWindow", "Введите название части речи...")
         )
-        if self.mode != '3' and self.mode != '4':
+        if self.mode != "3" and self.mode != "4":
             self.menu.setTitle(_translate("MainWindow", "Фильтрация и поиск"))
         self.lexem_filtration_action.setText(
             _translate("MainWindow", "Поиск по словам")
@@ -393,7 +397,7 @@ class Ui_MainWindow(object):
     def on_cell_double_click(self, row, column, MainWindow):
         item = self.result_table.item(row, column)
         sentence = item.text()
-        if self.mode == '3':
+        if self.mode == "3":
             main_analysis(sentence)
         else:
             Dialog = QtWidgets.QDialog(parent=MainWindow)
@@ -411,11 +415,13 @@ class Ui_MainWindow(object):
         self.analyze_text_button.clicked.connect(self.analyze_text_button_clicked)
         self.clear_button.clicked.connect(self._clear_button_clicked)
         self.help_button.clicked.connect(self.help_button_clicked)
-        if self.mode == '2':
+        if self.mode == "2":
             self.contex.clicked.connect(lambda: self.contex_button_clicked(MainWindow))
         self.search_line_edit.textChanged.connect(self._search_line_text_changed)
         self.search_button.clicked.connect(self._search_button_clicked)
-        self.save_anal.clicked.connect(lambda: self._save_anal_button_clicked(MainWindow))
+        self.save_anal.clicked.connect(
+            lambda: self._save_anal_button_clicked(MainWindow)
+        )
         self.part_line_edit.textChanged.connect(self._part_line_text_changed)
         self.min_frequency_spinbox.valueChanged.connect(
             self._min_freq_spinbox_value_changed
@@ -496,9 +502,9 @@ class Ui_MainWindow(object):
         elif not self.result_table.rowCount() == 0:
             self._clear_result_table()
         start = time.time()
-        if self.mode == '2':
+        if self.mode == "2":
             self.result = main_corpus(self.text_area.toPlainText())
-        elif self.mode == '1':
+        elif self.mode == "1":
             self.result = morphy_logic_main(self.text_area.toPlainText())
         else:
             self.result = split_sentence(self.text_area.toPlainText())
@@ -642,10 +648,14 @@ class Ui_MainWindow(object):
         flag = "word"
         if self.lexem_filtration_action.isChecked():
             word_to_search = self.search_line_edit.text().strip(" ")
-            if self.mode == '3' and self.mode == '4':
-                words = filter_syntactic_rows(search_type=word_to_search, data=self.result)
+            if self.mode == "3" and self.mode == "4":
+                words = filter_syntactic_rows(
+                    search_type=word_to_search, data=self.result
+                )
             else:
-                words = filter_rows(flag=flag, search_type=word_to_search, data=self.result)
+                words = filter_rows(
+                    flag=flag, search_type=word_to_search, data=self.result
+                )
             # Слово, по которому поиск будет
         elif self.frequency_filtration_action.isChecked():
             flag = "frequency"
@@ -663,7 +673,7 @@ class Ui_MainWindow(object):
             )
             # Часть речи, по которому поиск будет
         self._clear_result_table()
-        if self.mode == '3' and self.mode == '4':
+        if self.mode == "3" and self.mode == "4":
             for sentence in words:
                 self.emplace_word2(sentence)
         else:
