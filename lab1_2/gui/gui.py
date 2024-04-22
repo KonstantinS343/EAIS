@@ -648,7 +648,8 @@ class Ui_MainWindow(object):
         flag = "word"
         if self.lexem_filtration_action.isChecked():
             word_to_search = self.search_line_edit.text().strip(" ")
-            if self.mode == "3" and self.mode == "4":
+            print(self.mode)
+            if self.mode == "3" or self.mode == "4":
                 words = filter_syntactic_rows(
                     search_type=word_to_search, data=self.result
                 )
