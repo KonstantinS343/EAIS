@@ -864,4 +864,63 @@
             ]
         ]
     ]
+}{
+    "The statue depicts Libertas, the Roman goddess of liberty.": [
+        [
+            [
+                [
+                    "The",
+                    "DT"
+                ],
+                [
+                    "statue",
+                    "NN"
+                ]
+            ],
+            [
+                [
+                    [
+                        "depicts",
+                        "VBZ"
+                    ]
+                ],
+                [
+                    [
+                        "Libertas",
+                        "NNP"
+                    ]
+                ],
+                [
+                    [
+                        "the",
+                        "DT"
+                    ],
+                    [
+                        "Roman",
+                        "NNP"
+                    ]
+                ],
+                [
+                    [
+                        "goddess",
+                        "NN"
+                    ]
+                ],
+                [
+                    [
+                        [
+                            "of",
+                            "IN"
+                        ]
+                    ],
+                    [
+                        [
+                            "liberty",
+                            "NN"
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ]
 }

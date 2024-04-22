@@ -35,11 +35,10 @@ def find_words(words: List[str]) -> Dict[str, Dict[str, Union[str, int]]]:
 
 def main_corpus(text: str) -> Dict[str, Dict[str, Union[str, int]]]:
     parsed_text = list()
-    stop_words = set(stopwords.words("english")).union(set(string.punctuation))
 
     for i in nltk.word_tokenize(text):
-        if i not in stop_words:
+        if i not in stopwords.words():
             parsed_text.append(i)
-
-    words_dict = find_words(words=parsed_text)
+    for i in parsed_text:
+        print(nltk.pos_tag(i))
     return words_dict
