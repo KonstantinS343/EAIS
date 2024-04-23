@@ -6,6 +6,8 @@ import string
 import os
 import json
 
+from pkg_resources import working_set
+
 from prepare.prepare_corpus import prepare
 
 
@@ -39,6 +41,5 @@ def main_corpus(text: str) -> Dict[str, Dict[str, Union[str, int]]]:
     for i in nltk.word_tokenize(text):
         if i not in stopwords.words():
             parsed_text.append(i)
-    for i in parsed_text:
-        print(nltk.pos_tag(i))
+    words_dict = find_words(parsed_text)
     return words_dict
