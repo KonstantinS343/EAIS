@@ -2,11 +2,8 @@ import nltk
 from nltk.corpus import stopwords
 
 from typing import Dict, List, Union
-import string
 import os
 import json
-
-from pkg_resources import working_set
 
 from prepare.prepare_corpus import prepare
 
